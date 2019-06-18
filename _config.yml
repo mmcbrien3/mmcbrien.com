@@ -1,4 +1,5 @@
 theme: jekyll-theme-minimal
+title: On Vacation
 plugins:
   - jekyll-relative-links
 relative_links:
