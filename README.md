@@ -1,8 +1,6 @@
-## Welcome to GitHub Pages
+## Welcome to my static website
 
-You can use the [editor on GitHub](https://github.com/mmcbrien3/mmcbrien3.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+I'll post information about myself here, and maybe I'll write some stuff too!.
 
 ### Markdown
 
