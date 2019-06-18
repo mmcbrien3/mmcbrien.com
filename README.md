@@ -4,4 +4,4 @@ I'll post information about myself here, and maybe I'll write some stuff too!.
 
 ## LINKS
 
-- writings(writings.md)
+- [writings](./writings.md)
