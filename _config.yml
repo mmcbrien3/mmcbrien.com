@@ -1,4 +1,6 @@
 remote_theme: thelehhman/plainwhite-jekyll
+title: On Vacation
+author: Matthew McBrien
 plugins:
   - jekyll-relative-links
 relative_links:
