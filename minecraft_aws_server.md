@@ -4,7 +4,7 @@
 Creating servers, writing code, saving money, and playing Minecraft are all fun, so let's do all of it in this tutorial. I'll cover how to use an AWS EC2 (Elastic Compute Cloud) server instance to host a Minecraft Server. I'll then go into how to use Lambda Functions and CloudWatch Events to schedule your EC2 instance to only run during peak crafting hours. You'll learn some basics of the AWS architecture and have your very own Minecraft Server whenver you want.
 
 ### Setting up AWS Account
-First things first, you will need an AWS account. It's easy to setup over at [AWS](www.aws.com). You will need to enter a credit card for billing, but, depending on the resources you use in this tutorial, it will not cost you anything.
+First things first, you will need an AWS account. It's easy to setup over at [AWS](http://aws.com). You will need to enter a credit card for billing, but, depending on the resources you use in this tutorial, it will not cost you anything.
 
 ### Provisioning an EC2 Instance
 EC2 (or Elastic Compute Cloud) is the bedrock of all AWS services. This will be where we set up our configure, launch, and manage our server. Click on Services > EC2 to open the EC2 console. On the left hand side should be an "Instances" tab. Click on that and then "Launch Instance" to bring up all the options.
