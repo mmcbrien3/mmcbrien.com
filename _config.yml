@@ -1,4 +1,6 @@
 theme: jekyll-theme-minimal
+title: On Vacation
+description: I am Grad Student.
 plugins:
   - jekyll-relative-links
 relative_links:
