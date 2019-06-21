@@ -81,7 +81,7 @@ This won't start the server quite yet. It will fail because we haven't agreed to
 
 `vim eula.txt`
 
-This will open the file in the vim text editor. If you know what you are doing here, you can skip this paragraph. We need to change the final line `eula=false` to `eula=true`. To do this quickly, type `GA` to go to the end of the last line and jump into insert mode. Then delete, like a normal editor, hit backspace to delete `false` and replace it with `true`. Then, to exit and save type `Esc` (as in the escape button) and then `:wq`. Whew, we are done with vim. Note: vim is a super useful tool, and if you want to dive deep into Linux and other great tools, you should take a little bit of time to get the basics of vim down.
+This will open the file in the vim text editor. We need to change the final line `eula=false` to `eula=true`. If you know what you are doing in vim, you can skip this paragraph. To do this quickly, type `GA` to go to the end of the last line and jump into insert mode. Then delete, like a normal editor, hit backspace to delete `false` and replace it with `true`. Then, to exit and save type `Esc` (as in the escape button) and then `:wq`. Whew, we are done with vim. Note: vim is a super useful tool, and if you want to dive deep into Linux and other great tools, you should take a little bit of time to get the basics of vim down.
 
 Now you can finally start the Minecraft server. Reenter you previous command:
 
