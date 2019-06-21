@@ -51,7 +51,7 @@ With that you should be greeted by the friendly EC2 bash logo. You are now opera
 
 #### Setting up
 
-As you probably know, Minecraft runs is built with Java. Unfortunately, our instance doesn't come with that preinstalled. First thing to do is to download Java with:
+As you probably know, Minecraft is built with Java. Unfortunately, our instance doesn't come with that preinstalled. First thing to do is to download Java with:
 
 `sudo yum install java`
 
@@ -63,7 +63,7 @@ Now we can download the Minecraft Server with the following command:
 
 `wget https://launcher.mojang.com/v1/objects/808be3869e2ca6b62378f9f4b33c946621620019/server.jar`
 
-This includes downloads a file called server.jar to your current directory. You'll want to replace the link with the most current version of the Minecraft Server. At the time of writing, the most recent update is [1.14.2](https://minecraft.gamepedia.com/Java_Edition_1.14.2) which is what this command downloads. If you are at a more recent update, you can go to the [official download page](https://www.minecraft.net/en-us/download/server/) to find the newest one. To get the download link like wget requires, you'll want to right click on the download button and open that link in a new tab. Don't download the .jar directly. Instead, copy the address of the new tab to paste after the wget command.
+This includes downloads a file called server.jar to your current directory. You'll want to replace the link with the most current version of the Minecraft Server. At the time of writing, the most recent update is [1.14.2](https://minecraft.gamepedia.com/Java_Edition_1.14.2) which is what the previous command will download. If you are this in the future, you can go to the [official download page](https://www.minecraft.net/en-us/download/server/) to find the newest one. To get the download link that wget requires, you'll want to right click on the download button and open that link in a new tab. Don't download the .jar directly. Instead, copy the address of the new tab to paste after wget like: `wget <the copied link>`
 
 We are close to starting up our Minecraft server.
 
@@ -87,9 +87,11 @@ Now you can finally start the Minecraft server. Reenter you previous command:
 
 `java -Xmx<YOUR MEMORY SIZE> -Xms<YOUR MEMORY SIZE> -jar server.jar nogui`
 
+A bunch of Minecraft logs will start spitting out. 
+
 #### Testing
 
-Fire up Minecraft and head over to Multiplayer. Click "Add Server" and then under "Server Address", paste the IPv4 address of your instance followed by ":25565". Click "Done" and you should see the world slowly build. Back over on your instance, you should see some live logs indicating that a new player (you) has logged in. Success! 
+Fire up Minecraft and head over to Multiplayer. Click "Add Server" and then under "Server Address", paste the IPv4 address of your instance followed by ":25565". Click "Done" and you should see the world slowly build. Back over on your instance, you should see some live logs indicating that a new player (you) has logged in. Success! You can type "/say Hello from the server!" to send a message to all the players in the server to test out the server commands.
 
 So there we have it. If you are running a t2.micro instance, you can run this server for [free](https://aws.amazon.com/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=categories%23featured). However, if you so much as close the terminal where you are `ssh`ed in, your java process will terminate and your server will close. In the next few sections, I will discuss a few slightly more advanced things we can do with our server.
 
