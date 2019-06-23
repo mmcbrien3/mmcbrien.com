@@ -95,3 +95,23 @@ Fire up Minecraft and head over to Multiplayer. Click "Add Server" and then unde
 
 So there we have it. If you are running a t2.micro instance, you can run this server for [free](https://aws.amazon.com/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=categories%23featured). However, if you so much as close the terminal where you are `ssh`ed in, your java process will terminate and your server will close. In the next few sections, I will discuss a few slightly more advanced things we can do with our server.
 
+#### The Screen Command
+
+Now that you have a fully functional Minecraft server running in the cloud, you'll probably want to be able to close your own terminal. Otherwise, what is the point of hosting this in the cloud if your computer has to be always running? There are many ways of achieving this, but we'll use the Unix [screen](https://kb.iu.edu/d/acuy) command. The screen command allows you to host multiple windows that can be detached and accessed again later. This means we can run our java server and forget about it. 
+
+If your Minecraft server is still running, stop by entering `/stop`, the server command to stop the server. To create a new screen session with the name "minecraft", enter the following command:
+
+`screen -S minecraft -md`
+
+Now, to send commands to the session, we can either enter the window by using the resume command, or we can send them from this window. Let's be fancy and send them directly from this window. Enter the following two commands to change directories and then run the server in the screen session.
+
+`screen -S minecraft -X stuff 'cd ~/MinecraftServer\n'`
+
+`screen -S minecraft -X stuff 'sudo java -Xmx512M -Xms512M -jar server.jar\n'`
+
+Now we can check out what's happening in the screen server by using the `-r` modifier. If all has gone well, we should see the normal server logs being generated. If everything looks good you can type `Ctrl+a` and then `d` to exit the current screen session. You can then close the ssh connection and the server will remain open.
+
+`screen -r minecraft`
+
+### Extras
+
