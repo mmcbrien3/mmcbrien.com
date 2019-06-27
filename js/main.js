@@ -10,7 +10,7 @@ $(document).ready( function() {
     $.getJSON("https://geoip-db.com/json/",
         function (result) {
             if (result.length !== 0) {
-                myHeading.textContent = "Welcome from " + result.city + ".";
+                myHeading.textContent = "Thanks for visiting my website from " + result.city + ".";
             }
         });
     }
