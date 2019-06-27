@@ -1,5 +1,17 @@
 var myHeading = document.querySelector('h2');
-var location;
-$.get("http://ipinfo.io", function(response) {
-    myHeading.textContent = "Welcome from " + response.city;
-}, "jsonp");
+console.log("hello from js");
+var geocoder;
+
+
+
+$(document).ready( function() { 
+    console.log("ready");
+    console.log("Getting location");
+    $.getJSON("https://geoip-db.com/json/",
+        function (result) {
+            if (result.length !== 0) {
+                myHeading.textContent = "Welcome from " + result.city + ".";
+            }
+        });
+    }
+)
