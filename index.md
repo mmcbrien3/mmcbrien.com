@@ -1,6 +1,7 @@
 ---
 ---
 ## Welcome to my static website!
+{: #welcomeMessage}
 
 I'll post information about myself here, and maybe I'll write some stuff too!
 
