@@ -1,4 +1,6 @@
-## Games
+---
+---
+# Games
 
 ### Cube Hunt (WIP)
 
