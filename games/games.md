@@ -2,8 +2,7 @@
 ---
 # Games
 
-### Cube Hunt
+### [Cube Hunt](./game_source/cubehunt/cubehunt.html)
 
-- [game](./game_source/cubehunt/cubehunt.html)
-- [source](https://github.com/mmcbrien3/CubeHuntJS)
-
+A simple pathfinding game written with only javascript (no libraries).
+The game also features a global high score table run on AWS!
