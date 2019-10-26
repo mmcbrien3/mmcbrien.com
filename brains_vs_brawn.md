@@ -7,6 +7,8 @@
 The discrete cosine transform (DCT) is an important mathematical process that is used in image compression. It is called a discrete transform because it maps a set of discrete data points to a new domain. In our case, the DCT will convert an image into a sum of cosines of different frequencies. The DCT is similar to the discrete fourier transform, and in fact the DCT can be derived directly from the DFT. For many mathematical reasons that need not be discussed here, the DCT is preferred to the DFT for image compression.
 
 Let us define the DCT explicitly.
+
+
 $$
 \text{Imagine you have an } M\text{x}N \text{ image:} f[m,n]
 \\
@@ -14,6 +16,8 @@ f[0,0] \text{ represents the pixel at the origin, etc.}
 \\
 \text{DCT}(f)= F[k,l] = \sum_{m=0}^{M-1}\sum_{n=0}^{N-1} f[m,n]*\cos\left[\frac{\pi}{M}\left(m+\frac{1}{2}\right)k\right]*\cos\left[\frac{\pi}{N}\left(n+\frac{1}{2}\right)l\right]
 $$
+
+
 This looks complicated, but there are a few things to note that may clear things up. We can see that we have a double sum that covers the entire image from for each value of k and l in the DCT. This means that if we have a 512x512 image, the DCT will be a 512x512 matrix and each value in the DCT will require the entire 512x512=262144 term sum to be computed. Said another way, the total number of times the argument of the sum must be evaluated is equal to M^2*N^2, in the case of a 512x512 image, 68719476736 times.
 
 It's also worth noting that the cosines change in frequency based on the current value of m and k (or n and l). You can see that the value of F[0, 0] is simply the sum of all the pixel in f[m, n] because the argument of each cosine is always 0 and cos(0) = 1. As the value of k and l changes, we get the sum of each pixel in f multiplied by a cosine of some frequency dependent upon the position m, n.
