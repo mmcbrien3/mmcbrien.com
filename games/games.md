@@ -2,8 +2,12 @@
 ---
 # Games
 
-### Cube Hunt (WIP)
+### [Cube Hunt](./game_source/cubehunt/cubehunt.html)
 
-- [game](./game_source/cubehunt/cubehunt.html)
-- [source](https://github.com/mmcbrien3/CubeHuntJS)
+A simple pathfinding game written with only javascript (no libraries).
+The game also features a global high score table run on AWS!
 
+### [Cave Explorer (WIP)](./game_source/caveexplorer/index.html)
+
+Find keys hidden within the maze of a mysterious dungeon.
+I am learning the Phaser3 library through this game.
