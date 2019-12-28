@@ -2,6 +2,9 @@
 ---
 # University Projects
 
+## Digital Image Processing
+- [final report](./school_projects/dip/final_report.pdf)
+
 ## Statistical Machine Learning
 - [final poster](./school_projects/sml/final_poster.pdf)
 - [final report](./school_projects/sml/final_report.pdf)
