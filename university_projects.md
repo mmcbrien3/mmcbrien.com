@@ -5,6 +5,10 @@
 ## Digital Image Processing
 - [final report](./school_projects/dip/final_report.pdf)
 
+## Machine Learning in Biosciences
+- [final report](./school_projects/mlbs/final_report.pdf)
+- [video presentation](https://youtu.be/mR7Nx_P4qmk)
+
 ## Statistical Machine Learning
 - [final poster](./school_projects/sml/final_poster.pdf)
 - [final report](./school_projects/sml/final_report.pdf)
