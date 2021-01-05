@@ -1,6 +1,6 @@
 theme: jekyll-theme-minimal
 title: On Vacation
-description: I am a Grad Student.
+description: I am a Developer.
 logo: assets/logo.gif
 plugins_dir:
   - jekyll-relative-links
