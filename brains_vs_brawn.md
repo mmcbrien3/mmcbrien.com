@@ -1,4 +1,5 @@
 ---
+layout: default
 ---
 ## Brains vs. Brawn: A footnote on GPUs and the Discrete Cosine Transform
 
