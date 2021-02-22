@@ -16,7 +16,14 @@ export class GameAdministrator {
 	}
 
 	makeMove(piece, newPosition) {
-		return this.board.movePiece(piece, newPosition);
+		this.changeCurrentPlayer();
+		let isPromotion = this.checkForPromotion(piece, newPosition);
+		let pieceToDestroy = this.board.movePiece(piece, newPosition);
+
+		if (isPromotion) {
+			this.board.placePiece(new Queen(newPosition, piece.color));
+		}
+		return pieceToDestroy;
 	}
 
 	validateMoveIsLegal(piece, newPosition) {
@@ -25,7 +32,25 @@ export class GameAdministrator {
 	}
 
 	checkForEndOfGame() {
-		return false;
+		let pieces = this.board.getAllPiecesOfColor(this.currentPlayerColor);
+		let allMoves = [];
+		pieces.forEach(p => {
+			let pieceMoves = p.getMovablePositions(this.board);
+			allMoves = allMoves.concat(...pieceMoves);
+			console.log(allMoves);
+		})
+		console.log(allMoves);
+		let isGameOver = allMoves.length == 0;
+		if (isGameOver) {
+			console.log("GAME OVER");
+		}
+		return isGameOver;
+	}
+
+	checkForPromotion(piece, newPosition) {
+		let isPawnMove = piece.getStringRepresentation() === 'p';
+		let isFinalRank = newPosition.y == (NUM_RANKS - 1) || newPosition.y == 0;
+		return isPawnMove && isFinalRank;
 	}
 
 	changeCurrentPlayer() {

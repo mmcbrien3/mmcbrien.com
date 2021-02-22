@@ -1,4 +1,5 @@
 import { GameAdministratorBrowser } from './GameAdministratorBrowser.js';
+import { Colors } from './Pieces/Piece.js';
 
 const scaleRatio = window.devicePixelRatio / 3;
 console.log(window.devicePixelRatio);
@@ -31,6 +32,7 @@ var config = {
 };
 
 var game = new Phaser.Game(config);
+var phaserObject = null;
 
 
 function drawEmptyBoard(phaser) {
@@ -205,6 +207,9 @@ function preload() {
     this.load.image('bRook', [assetsFolder + 'black_rook.png']);
     this.load.image('bBishop', [assetsFolder + 'black_bishop.png']);
     this.load.image('bKnight', [assetsFolder + 'black_knight.png']);
+    this.load.image('gameOver', [assetsFolder + 'gameOver.png']);
+
+    phaserObject = this;
 }
 
 /**
@@ -233,9 +238,41 @@ function performMove(pieceToMove, newPosition) {
 	if (pieceDestroyed != null) {
 		pieceDestroyed.phaserSprite.destroy();
 	}
+
+	if (gameAdmin.checkForPromotion(pieceToMove, newPosition)) {
+		pieceToMove.phaserSprite.destroy();
+		let phaserPos = convertPosToPhaserCoords(newPosition);
+		let colorIndicator = 'w';
+		if (pieceToMove.color == Colors.BLACK) {
+			colorIndicator = 'b';
+		}
+		let newQueen = phaserObject.physics.add.sprite(phaserPos[0], phaserPos[1], colorIndicator + 'Queen').setInteractive();
+		gameAdmin.board.getPieceAtPosition(newPosition).setPhaserSprite(newQueen);
+
+	}
+
+	//this function is called specifically for castling,
+	//rook position needs to be updated on phaser side, but it is performed silently
+	//by the board class.
+	updateAllPhaserPositions();
+
+	if (gameAdmin.checkForEndOfGame()) {
+		phaserObject.physics.add.sprite(DEFAULT_BOARD_SIZE / 2, DEFAULT_BOARD_SIZE / 2, 'gameOver');
+	}
+}
+
+function updateAllPhaserPositions() {
+	let pieces = gameAdmin.board.getAllPieces();
+	pieces.forEach(p => {
+		let currentPos = p.position;
+		let phaserCoords = convertPosToPhaserCoords(currentPos);
+		p.phaserSprite.setPosition(phaserCoords[0], phaserCoords[1]);
+	})
 }
 
 function clickListener(pointer, localX, localY, event) {
+	console.log(pointer);
+	console.log(event);
 	let pos = convertPhaserCoordsToPos(pointer.x, pointer.y);
 	this.possibleMoves.forEach( pm => pm.destroy());
 
@@ -246,8 +283,13 @@ function clickListener(pointer, localX, localY, event) {
 		selectedPiece = null;
 		return;
 	}
-	selectedPiece = gameAdmin.board.getPieceAtPosition(pos);
-
+	let clickedPiece = gameAdmin.board.getPieceAtPosition(pos);
+	if (clickedPiece == null) {
+		return;
+	}
+	if (clickedPiece.color === gameAdmin.currentPlayerColor) {
+		selectedPiece = clickedPiece;
+	}
 	if (selectedPiece != null) {
 		console.log(selectedPiece);
 		drawPossibleMoves(this, selectedPiece, gameAdmin);
