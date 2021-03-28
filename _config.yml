@@ -1,7 +1,7 @@
 theme: jekyll-theme-minimal
-title: On Vacation
+title: mmcbrien
 description: I am a Developer.
-logo: assets/MattMcBrien.png
+logo: assets/splash.png
 plugins_dir:
   - jekyll-relative-links
 relative_links:
