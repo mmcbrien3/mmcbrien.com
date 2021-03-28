@@ -28,6 +28,10 @@ var config = {
         preload: preload,
         create: create,
         update: update,
+    },
+    scale: {
+        mode: Phaser.Scale.FIT,
+        autoCenter: Phaser.Scale.CENTER_BOTH
     }
 };
 
