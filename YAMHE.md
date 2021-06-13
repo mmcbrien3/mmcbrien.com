@@ -6,8 +6,6 @@ layout: default
 
 #### June 13th, 2021
 
-The Monty Hall Problem is a popular statistical puzzle. It's popularity comes from its simplicity and counterintuitivity. When first presented with this problem, the solution I thought of shouted out loudly as the only possibility. The answer seemed obvious, yet I was wrong. And this is clearly the case for many people as it has spurred many a youtube video and internet article.
-
 In this post, I will go over the basics of the Monty Hall problem and dive into some deeper problems that I came across during the course of writing. Additionally, I have created a Monty Hall simulator in Java for verifying my math and for experimentation. You can find the link to the GitHub at the conclusion of the post.
 
 ## Background
