@@ -3,6 +3,8 @@ layout: default
 ---
 ## Brains vs. Brawn: A footnote on GPUs and the Discrete Cosine Transform
 
+#### October 26th, 2019
+
 ### Introduction
 
 The discrete cosine transform (DCT) is an important mathematical process that is used in image compression. It is called a discrete transform because it maps a set of discrete data points to a new domain. In our case, the DCT will convert an image into a sum of cosines of different frequencies. The DCT is similar to the discrete fourier transform, and in fact the DCT can be derived directly from the DFT. For many mathematical reasons that need not be discussed here, the DCT is preferred to the DFT for image compression.
