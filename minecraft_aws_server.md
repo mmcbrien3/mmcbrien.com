@@ -3,6 +3,8 @@ layout: default
 ---
 ## How to host a Minecraft Server on AWS
 
+#### June 23rd, 2019
+
 Creating servers, writing code, saving money, and playing Minecraft are all fun, so let's do all of it in this tutorial. I'll cover how to use an AWS EC2 (Elastic Compute Cloud) server instance to host a Minecraft Server. I'll then go into how to use Lambda Functions and CloudWatch Events to schedule your EC2 instance to only run during peak crafting hours. You'll learn some basics of the AWS architecture and have your very own Minecraft Server whenver you want.
 
 ### Setting up AWS Account
