@@ -4,7 +4,9 @@ layout: default
 ## Welcome to my static website!
 {: #welcomeMessage}
 
-I'll post information about myself here, and maybe I'll write some stuff too!
+Hello there!
+
+I am a Software Development Engineer for [AWS Lambda](https://aws.amazon.com/lambda/). My team works on making the customer experience for [Event Invokes](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html) better!
 
 ## Professional Information
 
