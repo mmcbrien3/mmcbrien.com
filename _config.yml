@@ -1,6 +1,6 @@
 theme: jekyll-theme-minimal
 title: mmcbrien
-description: I am a Developer.
+description: 
 logo: assets/splash.png
 plugins_dir:
   - jekyll-relative-links
