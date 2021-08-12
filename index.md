@@ -6,7 +6,7 @@ layout: default
 
 Hello there!
 
-I am a Software Development Engineer for [AWS Lambda](https://aws.amazon.com/lambda/). My team works on making the customer experience for [Event Invokes](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html) better!
+I am a Software Development Engineer for [AWS Lambda](https://aws.amazon.com/lambda/). My team works on improving the customer experience for [Event Invokes](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html).
 
 ## Professional Information
 
