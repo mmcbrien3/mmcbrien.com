@@ -1489,8 +1489,7 @@ a {
   text-decoration: none; }
 
 a:hover, a:focus {
-  color: #ffc97d;
-  font-weight: bold; }
+  color: #f1fa8c; }
 
 a small {
   font-size: 11px;
