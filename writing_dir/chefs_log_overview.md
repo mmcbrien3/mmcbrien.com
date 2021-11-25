@@ -10,3 +10,4 @@ In each log, I will provide the following: an overview, a rating (both of how mu
 ## Logs
 - [Pad thai](./chefs_log/pad_thai.html)
 - [Fried Chicken](./chefs_log/fried_chicken.html)
+- [Hot Chocolate](./chefs_log/hot_chocolate.html)
