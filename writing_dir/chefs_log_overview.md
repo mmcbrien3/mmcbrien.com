@@ -8,9 +8,10 @@ I am not a skilled cook. I want to change that. I am going to try to cook some d
 In each log, I will provide the following: an overview, a rating (both of how much I like the dish when it's good and how well I think I executed), an ingredient's list, and some logs about how it all went and what to differently next time.
 
 ## Logs
+- [Crockpot Chicken](./chefs_log/crockpot_chicken.html)
 - [Beef Chili](./chefs_log/beef_chili.html)
 - [Empanadas](./chefs_log/empanadas.html)
 - [Shepherd's Pie](./chefs_log/shepherds_pie.html)
 - [Hot Chocolate](./chefs_log/hot_chocolate.html)
 - [Fried Chicken](./chefs_log/fried_chicken.html)
-- [Pad thai](./chefs_log/pad_thai.html)
+- [Pad Thai](./chefs_log/pad_thai.html)
