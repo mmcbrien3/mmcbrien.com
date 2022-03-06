@@ -5,7 +5,12 @@ layout: default
 # Chef's Log
 I am not a skilled cook. I want to change that. I am going to try to cook some dishes and write about what went right and what went wrong. The purpose of this is to not enumerate recipes, but it will include a list of recipes. The purpose of this is to become better at cooking by doing it more frequently and reflecting upon the experience.
 
-In each log, I will provide the following: an overview, a rating (both of how much I like the dish when it's good and how well I think I executed), an ingredient's list, and some logs about how it all went and what to differently next time.
+In each log, I will provide the following: an overview, a rating (1. how much I like the dish when it's good, and 2. how well I think I executed the dish), an ingredient's list, and some logs about how it all went and what to do differently next time.
+
+ | 
+-|-
+![](../../assets/fried_chicken_served.jpg)|![](../../assets/empanada_cooked_on_sheet.jpg)
+![](../../assets/sp_baked.jpg)|![](../../assets/crockpot_chicken_breasts_down.jpg)
 
 ## Logs
 - [Crockpot Chicken](./chefs_log/crockpot_chicken.html)
