@@ -250,6 +250,16 @@ body {
           animation: sky 200000ms linear infinite;
 }
 
+/* Disable the stars and night background for small (mobile) screens */
+@media only screen and  (max-width: 480px) {
+  .shooting_star{
+     display: none;
+  }
+  .night{
+    display: none;
+  }
+}
+
 .shooting_star {
   position: absolute;
   left: 50%;
