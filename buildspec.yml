@@ -13,7 +13,6 @@ phases:
   build:
     commands:
       - bundle exec jekyll build
-      - find -name "*.html" -exec sed -i 's/Hosted on GitHub Pages &mdash; Theme by <a href=\"https:\/\/github.com\/orderedlist\">orderedlist<\/a>/Hosted on S3. <a href=\"https:\/\/github.com\/orderedlist\/minimal">Theme<\/a>/g' {} \;
 artifacts:
   type: zip
   base-directory: _site
