@@ -33,7 +33,6 @@ $(document).ready(() => {
                 shaEntry.style.fontSize = 'x-small';
                 commitsDisplayed += 1;
                 let clonedNode = currentElement.cloneNode();
-                currentElement.parentElement.append(document.createElement('p'));
                 currentElement.parentElement.appendChild(clonedNode);
                 currentElement = clonedNode;
             };
