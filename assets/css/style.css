@@ -1535,6 +1535,10 @@ table {
   width: 100%;
   border-collapse: collapse; }
 
+table, th, td {
+  border: 1px solid #f8f8f8;
+}
+
 th, td {
   text-align: left;
   padding: 5px 10px;
@@ -1545,7 +1549,7 @@ dt {
   font-weight: 700; }
 
 th {
-  color: #444; }
+  color: #bd93f9; }
 
 img {
   max-width: 100%; }
