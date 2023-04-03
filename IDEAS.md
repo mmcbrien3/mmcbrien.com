@@ -4,3 +4,4 @@
 - Work on rivers length blog
 - Add bad computer opponent to chess game
 - Add fade in / fade out on "I am a Software Engineer" text
+  - http://jsfiddle.net/5M2PD/4/
