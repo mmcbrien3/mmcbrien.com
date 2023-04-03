@@ -75,5 +75,4 @@ I am a Software Development Engineer for [AWS Lambda](https://aws.amazon.com/lam
   <div class="shooting_star"></div>
   <div class="shooting_star"></div>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="./js/main.js"></script>
+
