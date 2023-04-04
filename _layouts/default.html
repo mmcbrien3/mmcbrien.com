@@ -24,12 +24,23 @@
   <body>
     <div class="wrapper">
       <header>
+        <div id="header">
         <h1><a href="/">mmcbrien</a></h1>
-        
-          <img src="/assets/splash.png" alt="Logo">
+            <div class="fadeLogos fadeLogosParent">
+              <img id="logoA" src="/assets/splashSoftwareEngineer.png" alt="Logo">
+            </div>
+            <div class="fadeLogos fadeLogosParent">
+                <img id="logoB" src="/assets/splashYellowJacket.png" alt="Logo">
+            </div> 
+            <div class="fadeLogos fadeLogosParent">
+                <img id="logoC" src="/assets/splashProgrammer.png" alt="Logo">
+            </div> 
+            <div class="fadeLogos fadeLogosChild">
+                <img id="logoD" src="/assets/splashWriter.png" alt="Logo">
+            </div>
         
         <p></p>
-        <div>
+        <div style="position:relative">
           <h3><a href="https://github.com/mmcbrien3/mmcbrien.com">GitHub Commits</a></h3>
           <table id="gitCommitsTable">
             <tr>
@@ -38,6 +49,7 @@
             </tr>
             <tr class="commitTableEntry"></b>
           </table>
+        </div>
         </div>
       </header>
       <section>

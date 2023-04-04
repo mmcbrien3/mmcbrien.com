@@ -24,55 +24,11 @@ I am a Software Development Engineer for [AWS Lambda](https://aws.amazon.com/lam
 
 <div class="night">
   <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
+</div>
+<div class="night">
   <div class="shooting_star"></div>
 </div>
-
+<div class="night">
+  <div class="shooting_star"></div>
+</div>
+<script src='./js/stars.js'></script>
