@@ -269,6 +269,7 @@ body {
 
 .shooting_star {
   position: absolute;
+  overflow: clip;
   left: 50%;
   top: 50%;
   height: 2px;
@@ -305,31 +306,21 @@ body {
 .shooting_star:nth-child(1) {
   top: calc(50% - 131px);
   left: calc(50% - 37px);
-  -webkit-animation-delay: 15313ms;
-          animation-delay: 15313ms;
   opacity: 0.11;
 }
 .shooting_star:nth-child(1)::before, .shooting_star:nth-child(1)::after {
-  -webkit-animation-delay: 15313ms;
-          animation-delay: 15313ms;
 }
 .shooting_star:nth-child(2) {
   top: calc(50% - 168px);
   left: calc(50% - 171px);
-  -webkit-animation-delay: 19212ms;
-          animation-delay: 19212ms;
   opacity: 0.12;
 }
 .shooting_star:nth-child(2)::before, .shooting_star:nth-child(2)::after {
-  -webkit-animation-delay: 19212ms;
-          animation-delay: 19212ms;
 }
 
 .shooting_star:nth-child(3) {
   top: calc(50% - 168px);
   left: calc(50% - 171px);
-  -webkit-animation-delay: 30750ms;
-          animation-delay: 30750ms;
   opacity: 0.12;
 }
 .shooting_star:nth-child(3)::before, .shooting_star:nth-child(2)::after {
@@ -635,28 +626,31 @@ footer {
 }
 
 @-webkit-keyframes logoFade {
-    0% {opacity: 0;}
-    5% {opacity: 1;}
-    25% {opacity: 1;}
-    30% {opacity: 0;}
-    100% {opacity: 0;}
+  0% {opacity: 1;}
+  20% {opacity: 1;}
+  30% {opacity: 0;}
+  95% {opacity: 0;}
+  100% {opacity: 1;}
 }
 @keyframes logoFade {
-  0% {opacity: 0;}
-  5% {opacity: 1;}
-  25% {opacity: 1;}
-  35% {opacity: 0;}
-  100% {opacity: 0;}
+  0% {opacity: 1;}
+  20% {opacity: 1;}
+  30% {opacity: 0;}
+  95% {opacity: 0;}
+  100% {opacity: 1;}
 }
 
+#logaA {
+  -webkit-animation-delay: -1s;
+}
 #logoB {
-  -webkit-animation-delay: -10s;
+  -webkit-animation-delay: -11s;
 }
 #logoC {
-  -webkit-animation-delay: -20s;
+  -webkit-animation-delay: -21s;
 }
 #logoD {
-  -webkit-animation-delay: -30s;
+  -webkit-animation-delay: -31s;
 }
 
 .header {
