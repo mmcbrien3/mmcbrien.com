@@ -2,6 +2,7 @@
 layout: default
 ---
 # Writings
+- [A Brief Intro to Neural Nets (with interactive nets!)](./writing_dir/InteractiveNN.html)
 - [Monte Carlo Estimation of Pi](./writing_dir/MonteCarloPi.html)
 - [Yet Another Monty Hall Exploration](./writing_dir/YAMHE.html)
 - [How to host a Minecraft Server on AWS](./writing_dir/minecraft_aws_server.html)
