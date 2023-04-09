@@ -69,3 +69,22 @@ function getFirstLineOfCommit(commitMessage) {
     var lines = commitMessage.split("\n");   // split all lines into array
     return lines.shift();   
 }
+
+let rescalingCanvases = document.getElementsByClassName("resizingCanvasContainer");
+for (let c of rescalingCanvases) {
+    const resizeObserver = new ResizeObserver(() => {
+        resizeScalingCanvas(c, c.children[0]);
+    });
+    resizeObserver.observe(c);
+    resizeScalingCanvas(c, c.children[0]);
+};
+
+function resizeScalingCanvas(container, canvas) {
+    console.log(`Resizing ${container.id}`);
+    let size = Math.max(container.clientWidth, container.clientHeight);
+    canvas.width = size;
+    canvas.height = size;
+    if (canvas.customResize !== undefined) {
+        canvas.customResize();
+    }
+}
