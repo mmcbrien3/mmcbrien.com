@@ -6,13 +6,12 @@ env:
 phases:
   install:
     runtime-versions:
-      ruby: 2.6
+      ruby: 3.1
     commands:
-      - gem install bundler
-      - bundle install
+      - echo "Installing requirements" && npm run install-reqs
   build:
     commands:
-      - bundle exec jekyll build
+      - npm run build
 artifacts:
   type: zip
   base-directory: _site

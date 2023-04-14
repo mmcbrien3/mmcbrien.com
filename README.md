@@ -1,3 +1,11 @@
-## How to test locally
+## Requirements
+- Ruby
+- Node
 
-Run `./build_and_serve_locally.sh` to build the website and serve it just like it will be when deployed to prod.
+Install requirements with `npm run install-reqs`  
+
+## Testing
+`npm run release`
+
+## Releasing
+Commits to github are automatically pulled into pipeline. `buildspec.yml` defines build commands.

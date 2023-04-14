@@ -1,0 +1,25 @@
+{
+  "name": "mmcbrien.com",
+  "version": "1.0.0",
+  "description": "Matt McBrien's personal website",
+  "scripts": {
+    "install-reqs": "gem install bundler && bundle install && npm install",
+    "clean": "rm -rf _site/",
+    "build": "bundle exec jekyll build",
+    "serve": "http-server _site/",
+    "release": "npm run clean && npm run build && npm run serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmcbrien3/mmcbrien.com.git"
+  },
+  "author": "Matt McBrien",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmcbrien3/mmcbrien.com/issues"
+  },
+  "homepage": "https://github.com/mmcbrien3/mmcbrien.com#readme",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
