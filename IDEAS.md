@@ -2,4 +2,3 @@
 
 - Work on rivers length blog
 - Add bad computer opponent to chess game
-- How It's Made blog post

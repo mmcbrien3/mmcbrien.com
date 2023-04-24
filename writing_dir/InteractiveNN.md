@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: writing
 ---
 ## A Brief Intro to Neural Nets
 ### with interactive nets!

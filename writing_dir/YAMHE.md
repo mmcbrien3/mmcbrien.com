@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: writing
 ---
 
 ![](../assets/monty_hall_splash.png)

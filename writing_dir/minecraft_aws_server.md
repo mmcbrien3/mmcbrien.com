@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: writing
 ---
 ## How to host a Minecraft Server on AWS
 
