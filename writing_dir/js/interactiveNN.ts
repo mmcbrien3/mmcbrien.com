@@ -1,24 +1,28 @@
-let canvas = document.getElementById("nnCanvas");
-let ctx = canvas.getContext("2d");
+let nnCanvas: ResizingCanvas = document.getElementById('nnCanvas') as ResizingCanvas;
+let nnCtx: CanvasRenderingContext2D = nnCanvas.getContext('2d') as CanvasRenderingContext2D;
 
-let simpleCanvas = document.getElementById("simpleCanvas");
-let simpleCtx = simpleCanvas.getContext("2d");
+let simpleCanvas: ResizingCanvas = document.getElementById('simpleCanvas') as ResizingCanvas;
+let simpleCtx = simpleCanvas.getContext('2d') as CanvasRenderingContext2D;
 
-let exampleCanvas = document.getElementById("exampleCanvas");
-let exampleCtx = exampleCanvas.getContext("2d");
+let exampleCanvas: ResizingCanvas = document.getElementById('exampleCanvas') as ResizingCanvas;
+let exampleCtx = exampleCanvas.getContext('2d') as CanvasRenderingContext2D;
 
 let MAX_VALUE = 3;
 
 class NNNode {
-    connections;
-    bias;
-    activationFunction;
-    cachedValue;
-    x;
-    y;
-    isOutputNode = false;
-    radius = 10;
-    constructor(upstreamNodes, upstreamWeights, bias, activationFunction, isOutputNode=false) {
+    public connections: Connection[];
+    public bias: number;
+    public activationFunction: Function;
+    public x: number;
+    public y: number; 
+    public isOutputNode: boolean = false;
+    public radius: number = 10;
+
+    private cachedValue: number | undefined;
+
+    constructor(upstreamNodes: NNNode[], upstreamWeights: number[], 
+                bias: number, activationFunction: (input: number) => number, 
+                isOutputNode=false) {
         this.connections = [];
         for (let i = 0; i < upstreamNodes.length; i++) {
             this.connections.push(new Connection(upstreamNodes[i], upstreamWeights[i]));
@@ -29,7 +33,7 @@ class NNNode {
         this.isOutputNode = isOutputNode;
     }  
 
-    compute() {
+    compute(): number {
         if (this.cachedValue !== undefined) {
             return this.cachedValue;
         }
@@ -46,19 +50,19 @@ class NNNode {
         }
         let input = sum + this.bias;
         this.cachedValue = this.activationFunction(input);
-        return this.cachedValue;
+        return this.cachedValue!;
     }
 
-    reset() {
+    reset(): void {
         this.cachedValue = undefined;
     }
 
-    setPosition(x, y) {
+    setPosition(x: number, y: number): void {
         this.x = x;
         this.y = y;
     }
 
-    draw(ctx) {
+    draw(ctx: CanvasRenderingContext2D): void {
         if (this.connections.length > 0 && !this.isOutputNode) {
             ctx.fillStyle = shadeColor('#ff5555', (this.bias - 1) / (MAX_VALUE * 2) * 100)
             ctx.beginPath();
@@ -75,50 +79,50 @@ class NNNode {
         ctx.fill();
     }
 
-    getConnections() {
+    getConnections(): Connection[] {
         return this.connections;
     }
 
-    isInNode(x, y) {
+    isInNode(x: number, y: number): boolean {
         return ((x - this.x) ** 2 + (y - this.y) ** 2) ** 0.5 < (this.radius + 5);
     }
 }
 
 class Connection {
-    upstreamNode;
-    weight;
-    constructor(upstreamNode, weight) {
+    public upstreamNode: NNNode;
+    public weight: number;
+    constructor(upstreamNode: NNNode, weight: number) {
         this.upstreamNode = upstreamNode;
         this.weight = weight;
     }
 
-    getWeight() {
+    getWeight(): number {
         return this.weight;
     }
 
-    getUpstream() {
+    getUpstream(): NNNode {
         return this.upstreamNode;
     }
 }
 
 class Network {
-    layers;
-    canvas;
-    ctx;
-    dataDivId;
-    padding = 0;
-    constructor(canvas, ctx, dataDivId) {
+    public layers: NNNode[][];
+    public canvas: ResizingCanvas;
+    public ctx: CanvasRenderingContext2D
+    public dataDivId?: string;
+    public padding: number = 0;
+    constructor(canvas: ResizingCanvas, ctx: CanvasRenderingContext2D, dataDivId?: string) {
         this.layers = [];
         this.canvas = canvas;
         this.ctx = ctx;
         this.dataDivId = dataDivId;
     }
 
-    addLayer(layer) {
+    addLayer(layer: NNNode[]): void {
         this.layers.push(layer);
     }
 
-    reset() {
+    reset(): void {
         for (let l of this.layers) {
             for (let n of l) {
                 n.reset();
@@ -126,7 +130,7 @@ class Network {
         }
     }
 
-    drawNetwork() {
+    drawNetwork(): void {
         let drawWidth = this.canvas.width - 2 * this.padding;
         let drawHeight = this.canvas.height - 2 * this.padding;
         let xDiff = drawWidth / (this.layers.length + 1);
@@ -155,7 +159,7 @@ class Network {
         }
     }
 
-    drawLine(weight, startX, startY, endX, endY) {
+    drawLine(weight: number, startX: number, startY: number, endX: number, endY: number): void {
         this.ctx.strokeStyle = shadeColor('#ff5555', (weight - 1) / 2 * 100)
         this.ctx.beginPath();
         this.ctx.moveTo(startX, startY);
@@ -163,7 +167,7 @@ class Network {
         this.ctx.stroke(); 
     }
     
-    clickOnNode(x, y) {
+    clickOnNode(x: number, y: number): void {
         for (let l of this.layers) {
             for (let n of l) {
                 if (n.isInNode(x, y) && !n.isOutputNode) {
@@ -178,24 +182,14 @@ class Network {
     }
 }
 
-function convertToHex(r, g, b) {
-    let convertToRange = (x) => {return Math.round(x / MAX_VALUE * 205) + 50};
-    let rVal = convertToRange(r).toString(16).toLocaleString('en-US', {minimumIntegerDigits: 2})
-    let gVal = convertToRange(g).toString(16).toLocaleString('en-US', {minimumIntegerDigits: 2})
-    let bVal = convertToRange(b).toString(16).toLocaleString('en-US', {minimumIntegerDigits: 2});
-    let val = `#${rVal}${gVal}${bVal}`; // #ffffff in hex
-    return val;
-}
+function shadeColor(color: string, percent: number): string {
+    let R: number = parseInt(color.substring(1,3),16);
+    let G: number = parseInt(color.substring(3,5),16);
+    let B: number = parseInt(color.substring(5,7),16);
 
-function shadeColor(color, percent) {
-
-    var R = parseInt(color.substring(1,3),16);
-    var G = parseInt(color.substring(3,5),16);
-    var B = parseInt(color.substring(5,7),16);
-
-    R = parseInt(R * (100 + percent) / 100);
-    G = parseInt(G * (100 + percent) / 100);
-    B = parseInt(B * (100 + percent) / 100);
+    R = R * (100 + percent) / 100;
+    G = G * (100 + percent) / 100;
+    B = B * (100 + percent) / 100;
 
     R = (R<255)?R:255;  
     G = (G<255)?G:255;  
@@ -205,26 +199,26 @@ function shadeColor(color, percent) {
     G = Math.round(G)
     B = Math.round(B)
 
-    var RR = ((R.toString(16).length==1)?"0"+R.toString(16):R.toString(16));
-    var GG = ((G.toString(16).length==1)?"0"+G.toString(16):G.toString(16));
-    var BB = ((B.toString(16).length==1)?"0"+B.toString(16):B.toString(16));
+    var RR = ((R.toString(16).length==1)?'0'+R.toString(16):R.toString(16));
+    var GG = ((G.toString(16).length==1)?'0'+G.toString(16):G.toString(16));
+    var BB = ((B.toString(16).length==1)?'0'+B.toString(16):B.toString(16));
 
-    return "#"+RR+GG+BB;
+    return '#'+RR+GG+BB;
 }
 
-function sigmoid(x) {
+function sigmoid(x: number): number {
     return 1 / (1 + Math.E ** (-x));
 }
 
-function linear(x) {
+function linear(x: number): number {
     return x;
 }
 
-function tanh(x) {
+function tanh(x: number): number {
     return Math.tanh(x);
 }
 
-function rand() {
+function rand(): number {
     return Math.random() * -2 + 1
 }
 
@@ -236,7 +230,7 @@ exampleNetwork.addLayer(exampleFirstLayer)
 exampleNetwork.addLayer(exampleMiddleLayer)
 exampleNetwork.addLayer(exampleOutputLayer);
 
-let simpleNetwork = new Network(simpleCanvas, simpleCtx, "simpleData");
+let simpleNetwork = new Network(simpleCanvas, simpleCtx, 'simpleData');
 let simpleFirstLayer = [new NNNode([], [], 0, linear)]
 let simpleMiddleLayer = [new NNNode(simpleFirstLayer, [1], 0, tanh)]
 let simpleOutputLayer = [new NNNode(simpleMiddleLayer, [1], 0, tanh, true)]
@@ -244,7 +238,7 @@ simpleNetwork.addLayer(simpleFirstLayer)
 simpleNetwork.addLayer(simpleMiddleLayer)
 simpleNetwork.addLayer(simpleOutputLayer);
 
-let network = new Network(canvas, ctx, "nnData");
+let network = new Network(nnCanvas, nnCtx, 'nnData');
 
 let firstLayer = [new NNNode([], [], 0, linear), new NNNode([], [], 0, linear)];
 network.addLayer(firstLayer);
@@ -253,8 +247,8 @@ let numHiddenLayers = 2;
 let hiddenLayerSize = 3;
 let previousLayer = firstLayer;
 for (let h = 0; h < numHiddenLayers; h++) {
-    let layer = [];
-    let conns = [];
+    let layer: NNNode[] = [];
+    let conns: number[] = [];
     for (let i = 0; i < previousLayer.length; i++) {
         conns.push(1)
     }
@@ -271,20 +265,20 @@ console.log(outputNode.compute());
 
 network.addLayer([outputNode]);
 
-function drawData(network, dataDivId) {
+function drawData(network: Network, dataDivId?: string) {
     if (dataDivId === undefined) {
         return;
     }
-    data = document.getElementById(dataDivId);
-    inputValues = [];
+    let data = document.getElementById(dataDivId);
+    let inputValues: string[] = [];
     network.layers[0].forEach(n => {inputValues.push(n.compute().toFixed(2))});
-    outputValue = network.layers[network.layers.length - 1][0].compute().toFixed(2);
-    data.innerHTML = 
-    `Input layer values: ${inputValues}<br>` + 
-    `Output value: ${outputValue}<br>`;
+    let outputValue = network.layers[network.layers.length - 1][0].compute().toFixed(2);
+    data!.innerHTML = 
+        `Input layer values: ${inputValues}<br>` + 
+        `Output value: ${outputValue}<br>`;
 }
 
-function drawAll(ctx, canvas, network, dataDivId) {
+function drawAll(ctx: CanvasRenderingContext2D, canvas: ResizingCanvas, network: Network, dataDivId?: string) {
     ctx.fillStyle = '#282a36';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.fill();
@@ -292,14 +286,14 @@ function drawAll(ctx, canvas, network, dataDivId) {
     drawData(network, dataDivId);
 }
 
-canvas.customResize = () => {
-    drawAll(ctx, canvas, network, "nnData");
+nnCanvas.customResize = () => {
+    drawAll(nnCtx, nnCanvas, network, 'nnData');
 }
 
-canvas.addEventListener('click', function(event) {
-    var rect = canvas.getBoundingClientRect();
-    let x = (event.clientX - rect.left) / (rect.right - rect.left) * canvas.width;
-    let y = (event.clientY - rect.top) / (rect.bottom - rect.top) * canvas.height;
+nnCanvas.addEventListener('click', function(event) {
+    var rect = nnCanvas.getBoundingClientRect();
+    let x = (event.clientX - rect.left) / (rect.right - rect.left) * nnCanvas.width;
+    let y = (event.clientY - rect.top) / (rect.bottom - rect.top) * nnCanvas.height;
 
     console.log(`clicked ${x}, ${y}`)
     // Collision detection between clicked offset and element.
@@ -309,7 +303,7 @@ canvas.addEventListener('click', function(event) {
 
 simpleCanvas.customResize = () => {
     simpleCanvas.height = simpleCanvas.width / 2;
-    drawAll(simpleCtx, simpleCanvas, simpleNetwork, "simpleData");
+    drawAll(simpleCtx, simpleCanvas, simpleNetwork, 'simpleData');
 }
 
 exampleCanvas.customResize = () => {

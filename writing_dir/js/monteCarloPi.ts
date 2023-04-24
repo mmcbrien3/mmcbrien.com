@@ -1,12 +1,12 @@
-let canvas = document.getElementById("piCanvas");
-let filledCanvas = document.getElementById("filledCanvas");
-let filledCtx = filledCanvas.getContext("2d");
-let piText = document.getElementById("piValue");
-let ctx = canvas.getContext("2d");
+let piCanvas: ResizingCanvas = document.getElementById('piCanvas') as ResizingCanvas;
+let piCtx: CanvasRenderingContext2D = piCanvas.getContext('2d') as CanvasRenderingContext2D;
+let filledCanvas: ResizingCanvas = document.getElementById('filledCanvas') as ResizingCanvas;
+let filledCtx: CanvasRenderingContext2D = filledCanvas.getContext('2d') as CanvasRenderingContext2D;
+let piText: HTMLDivElement = document.getElementById('piValue') as HTMLDivElement;
 
-canvas.customResize = () => {
+piCanvas.customResize = () => {
     reset();
-    darts.forEach(d => d.draw(ctx));
+    darts.forEach(d => d.draw(piCtx));
 }
 
 filledCanvas.customResize = () => {
@@ -16,9 +16,9 @@ filledCanvas.customResize = () => {
 let timeoutDelay = 100;
 let maxTimeoutDelay = 250;
 let minTimeoutDelay = 1;
-let currentTimeoutId = undefined;
+let currentTimeoutId: number | undefined = undefined;
 
-function goFaster() {
+function goFaster(): void {
     timeoutDelay = Math.max(minTimeoutDelay, timeoutDelay - 50);
     clearTimeout(currentTimeoutId);
     currentTimeoutId = setTimeout(() => loop(), timeoutDelay);
@@ -31,7 +31,7 @@ function goSlower() {
 }
 
 
-let darts = [];
+let darts: Dart[] = [];
 let dartsInCircleCount = 0;
 let maxDarts = 100000;
 
@@ -52,54 +52,54 @@ function fill() {
 }
 
 class Dart {
-    x;
-    y;
+    public x: number;
+    public y: number;
     constructor() {
         this.x = Math.random() * 2 - 1;
         this.y = Math.random() * 2 - 1;
     }
 
-    draw(ctx) {
+    draw(ctx: CanvasRenderingContext2D) {
         if (this.isInCircle()) {
             ctx.fillStyle = dartInCircleColor;
         } else {
             ctx.fillStyle = dartNotInCircleColor;
         }
         ctx.beginPath();
-        let drawX = ((this.x + 1) / 2) * canvas.width;
-        let drawY = ((this.y + 1) / 2) * canvas.width;
+        let drawX = ((this.x + 1) / 2) * piCanvas.width;
+        let drawY = ((this.y + 1) / 2) * piCanvas.width;
         ctx.arc(drawX, drawY, 2, 0, 2 * Math.PI, false);
         ctx.closePath();
         ctx.fill();
     }
 
-    isInCircle() {
+    isInCircle(): boolean {
         return (this.x ** 2 + this.y ** 2) ** 0.5 < 1;
     }
 }
 
-function drawBackground() {
-    console.log("filling bg");
-    ctx.fillStyle = bgColor;
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+function drawBackground(): void {
+    console.log('filling bg');
+    piCtx.fillStyle = bgColor;
+    piCtx.fillRect(0, 0, piCanvas.width, piCanvas.height);
 }
 
-function reset() {
+function reset(): void {
     drawBackground();
     drawCircle();
 }
 
-function drawCircle() {
-    ctx.strokeStyle = circleColor;
-    ctx.beginPath();
-    ctx.arc(canvas.width / 2, canvas.height / 2, canvas.width / 2, 0, 2 * Math.PI);
-    ctx.stroke();
+function drawCircle(): void {
+    piCtx.strokeStyle = circleColor;
+    piCtx.beginPath();
+    piCtx.arc(piCanvas.width / 2, piCanvas.height / 2, piCanvas.width / 2, 0, 2 * Math.PI);
+    piCtx.stroke();
 }
 
-function loop() {
+function loop(): void {
     if (darts.length < maxDarts) {
         let dart = new Dart();
-        dart.draw(ctx);
+        dart.draw(piCtx);
         darts.push(dart);
         if (dart.isInCircle()) {
             dartsInCircleCount += 1;
@@ -139,6 +139,6 @@ function buttonReset() {
     loop();
 }
 
-document.getElementById("resetButton").addEventListener("click", buttonReset);
-document.getElementById("fasterButton").addEventListener("click", goFaster);
-document.getElementById("slowerButton").addEventListener("click", goSlower);
+document.getElementById('resetButton')!.addEventListener('click', buttonReset);
+document.getElementById('fasterButton')!.addEventListener('click', goFaster);
+document.getElementById('slowerButton')!.addEventListener('click', goSlower);

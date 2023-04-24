@@ -8,21 +8,39 @@ console.log(
 "  /  /  \\   \\_                    \n" +
 " /__/    \\____|                   \n" 
 );
+
+interface githubCommitData {
+    commit: gitCommitData
+    html_url: string
+    sha: string
+}
+
+interface gitCommitData {
+    message: string
+}
+
 const MAX_COMMITS_TO_SHOW = 3;
-var gitTable = document.getElementById('gitCommitsTable');
+const GIT_COMMITS_TABLE_ID = 'gitCommitsTable';
+const GIT_COMMITS_TABLE_ENTRY_CLASS_NAME = 'commitTableEntry';
+const RESIZING_CANVAS_CONTAINER_CLASS_NAME = 'resizingCanvasContainer';
+const RECENT_COMMITS_CACHE_KEY = 'recentCommits';
+const GITHUB_COMMITS_API_URL = 'https://api.github.com/repos/mmcbrien3/mmcbrien.com/commits';
+
+let gitTable: HTMLElement = (document.getElementById(GIT_COMMITS_TABLE_ID))!;
+
 // TODO: add token to increase throttling limit. Getting throttled a lot right now.
 $(document).ready(() => { 
     populateCommitTable();
 });
 
-function populateCommitTable() {
-    var recentCommits = null;
-    if(sessionStorage.getItem('recentCommits')) {
-        recentCommits = JSON.parse(sessionStorage.getItem('recentCommits'));
+function populateCommitTable(): void {
+    let recentCommits: githubCommitData[] | null = null;
+    if(sessionStorage.getItem(RECENT_COMMITS_CACHE_KEY)) {
+        recentCommits = JSON.parse(sessionStorage.getItem(RECENT_COMMITS_CACHE_KEY)!);
     }
-    if (recentCommits === null) {
+    if (!recentCommits) {
         $.ajax({
-            url: "https://api.github.com/repos/mmcbrien3/mmcbrien.com/commits",
+            url: GITHUB_COMMITS_API_URL,
             headers: { 'User-Agent': 'mmcbrien.com' },
             dataType: 'json',
             success: (result) => {
@@ -30,8 +48,8 @@ function populateCommitTable() {
                 populateCommitTableUsingResult(result);
                 sessionStorage.setItem('recentCommits', JSON.stringify(result));
             },
-            error: (error) => {
-                gitTable.remove();
+            error: () => {
+                gitTable!.remove();
             }
         })
     } else {
@@ -40,24 +58,29 @@ function populateCommitTable() {
     }
 }
 
-function populateCommitTableUsingResult(result) {
+function populateCommitTableUsingResult(result: githubCommitData[]): void {
     let commitsDisplayed = 0;
-    var commitTableEntries = document.getElementsByClassName("commitTableEntry");
-    let currentElement = commitTableEntries[0];
+    let commitTableEntries: HTMLCollectionOf<Element> = document.getElementsByClassName(GIT_COMMITS_TABLE_ENTRY_CLASS_NAME)!;
+    let currentElement: Node = commitTableEntries[0];
     while (commitsDisplayed < MAX_COMMITS_TO_SHOW && result.length >= commitsDisplayed) {
         let currentCommit = result[commitsDisplayed];
         let messageEntry = currentElement.appendChild(document.createElement('th'));
+
         messageEntry.textContent = getFirstLineOfCommit(currentCommit.commit.message);
         messageEntry.style.fontSize = 'x-small';
+
         let shaEntry = currentElement.appendChild(document.createElement('th'));
-        linkElement = shaEntry.appendChild(document.createElement('a'));
+        let linkElement = shaEntry.appendChild(document.createElement('a'));
+
         linkElement.href = currentCommit.html_url;
         linkElement.textContent = currentCommit.sha.substring(0, 7);
         shaEntry.style.fontSize = 'x-small';
+
         commitsDisplayed += 1;
+
         if (commitTableEntries.length <= commitsDisplayed) {
-            let clonedNode = currentElement.cloneNode();
-            currentElement.parentElement.appendChild(clonedNode);
+            let clonedNode: Node = currentElement.cloneNode();
+            currentElement.parentElement!.appendChild(clonedNode);
             currentElement = clonedNode;
         } else {
             currentElement = commitTableEntries[commitsDisplayed];
@@ -65,21 +88,26 @@ function populateCommitTableUsingResult(result) {
     };
 }
 
-function getFirstLineOfCommit(commitMessage) {
-    var lines = commitMessage.split("\n");   // split all lines into array
-    return lines.shift();   
+function getFirstLineOfCommit(commitMessage: string): string {
+    let lines: string[] = commitMessage.split("\n");   // split all lines into array
+    let result = lines.shift()
+    if (!result) {
+        throw new Error(`Could not find first line of commit: ${commitMessage}`);
+    }
+    return result;
 }
 
-let rescalingCanvases = document.getElementsByClassName("resizingCanvasContainer");
-for (let c of rescalingCanvases) {
+let rescalingCanvases: HTMLCollectionOf<Element> = document.getElementsByClassName(RESIZING_CANVAS_CONTAINER_CLASS_NAME);
+
+for (const c of rescalingCanvases) {
     const resizeObserver = new ResizeObserver(() => {
-        resizeScalingCanvas(c, c.children[0]);
+        resizeScalingCanvas(c, c.children[0] as ResizingCanvas);
     });
     resizeObserver.observe(c);
-    resizeScalingCanvas(c, c.children[0]);
+    resizeScalingCanvas(c, c.children[0] as ResizingCanvas);
 };
 
-function resizeScalingCanvas(container, canvas) {
+function resizeScalingCanvas(container: Element, canvas: ResizingCanvas) {
     console.log(`Resizing ${container.id}`);
     let size = Math.max(container.clientWidth, container.clientHeight);
     canvas.width = size;
