@@ -4,10 +4,11 @@
   "description": "Matt McBrien's personal website",
   "scripts": {
     "install-reqs": "gem install bundler && bundle install && npm install",
-    "clean": "rm -rf _site/",
+    "clean": "rm -rf _site/ && npm run babel_clean | exit 0",
     "jekyll": "bundle exec jekyll build",
+    "babel_clean": "for f in $(find . -name '*.ts' -not -path './node_modules/*'); do rm \"${f%.*}\".js; done",
     "babel": "find . -name '*.ts' -not -path './node_modules/*' | xargs -I {} babel {} --extensions .ts --out-dir ./ --relative",
-    "build": "npm run babel && npm run jekyll",
+    "build": "npm run babel && npm run jekyll && npm run babel_clean",
     "serve": "http-server _site/",
     "release": "npm run clean && npm run build && npm run serve"
   },
