@@ -65,7 +65,7 @@ released, and published!
 In the future, I could extend the release process to include testing to validate the build
 and CloudFront actions to expedite the release.
 
-## NPM
+### NPM
 
 The next improvement came when I realized how poor my dependency management was. I usually make changes on
 my laptop, but I tried making a change on my desktop. I realized that getting all the dependencies installed
