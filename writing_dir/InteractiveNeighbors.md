@@ -2,6 +2,11 @@
 layout: writing
 ---
 
+## Interactive K Nearest Neighbors
+
+The following shows how regions would be classified based on the training data provided. The nodes (training
+data) can be moved by clicking on them and selecting a new space for them.
+
 <div id="knnCanvasContainer" class="resizingCanvasContainer">
 <canvas id="knnCanvas" class="resizingCanvas"></canvas>
 </div>
