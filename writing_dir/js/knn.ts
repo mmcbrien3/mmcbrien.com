@@ -3,7 +3,8 @@ let knnCtx: CanvasRenderingContext2D = knnCanvas.getContext('2d') as CanvasRende
 
 const NODE_RADIUS = 15;
 const ORIGINAL_CANVAS_SIZE = 500;
-
+// TODO: Add option to click background and highlight "nearest neighbors"
+// This will make it easier to validate the algorithm is working correctly :)
 class KnnClassification {
     readonly classId: string;
     readonly nodeColor: string;
@@ -152,7 +153,7 @@ const knnEnvironment = new KnnEnvironment(nodes);
 function drawBackgroundKnn(canvas: ResizingCanvas, ctx: CanvasRenderingContext2D, nodes: KnnNode[]) {
     for (let i = 0; i < canvas.width; i++) {
         for (let j = 0; j < canvas.height; j++) {
-            const classification = getClassOfKNearestNeighbors(i, j, nodes, 2)
+            const classification = getClassOfKNearestNeighbors(i, j, nodes, 4)
             ctx.fillStyle = classification.regionColor;
             ctx.fillRect(i, j, 1, 1 );
         }
@@ -175,20 +176,34 @@ function getClassOfKNearestNeighbors(x: number, y: number, nodes: KnnNode[], k: 
     distancesByClass.sort((a, b) => a.distance - b.distance);
 
     const nearestNeighborsByClass = new Map<string, number>()
-    for (const dc of distancesByClass) {
+    let mostNeighborsClass: KnnClassification | undefined;
+    let mostNeighborsNumber = 0;
+    let tieExists = true;
+    for (let i = 0; i < k; i++) {
         let nearest = 0;
+        const dc = distancesByClass[i];
         if (nearestNeighborsByClass.has(dc.classification.classId)) {
             nearest = nearestNeighborsByClass.get(dc.classification.classId)! + 1;
         } else {
             nearest = 1;
         }
-        if (nearest >= k) {
-            return dc.classification;
+        if (nearest > mostNeighborsNumber) {
+            mostNeighborsNumber = nearest;
+            mostNeighborsClass = dc.classification;
+            tieExists = false;
+        } else if (nearest == mostNeighborsNumber) {
+            tieExists = true;
         }
         nearestNeighborsByClass.set(dc.classification.classId, nearest);
     }
 
-    throw new Error('Could not find nearest');
+    if (tieExists) {
+        return new KnnClassification('TIE', '#999999', '#999999')
+    } else if (mostNeighborsClass) {
+        return mostNeighborsClass;
+    } else {
+        throw new Error('Could not find nearest');
+    }
 }
 
 function drawAll() {
