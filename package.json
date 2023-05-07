@@ -4,11 +4,12 @@
   "description": "Matt McBrien's personal website",
   "scripts": {
     "install-reqs": "gem install bundler && bundle install && npm install",
+    "webpack": "webpack",
     "clean": "rm -rf _site/ && npm run babel_clean | exit 0",
     "jekyll": "bundle exec jekyll build",
     "babel_clean": "for f in $(find . -name '*.ts' -not -path './node_modules/*'); do rm \"${f%.*}\".js; done",
     "babel": "find . -name '*.ts' -not -path './node_modules/*' | xargs -I {} babel {} --extensions .ts --out-dir ./ --relative",
-    "build": "npm run babel && npm run jekyll && npm run babel_clean",
+    "build": "npm run babel && npm run jekyll && npm run babel_clean && npm run webpack",
     "serve": "http-server _site/",
     "release": "npm run clean && npm run build && npm run serve"
   },
@@ -28,6 +29,9 @@
     "@babel/preset-env": "^7.21.4",
     "@babel/preset-typescript": "^7.21.4",
     "@types/jquery": "^3.5.16",
-    "http-server": "^14.1.1"
+    "@types/node": "^20.1.0",
+    "http-server": "^14.1.1",
+    "webpack": "^5.82.0",
+    "webpack-cli": "^5.1.0"
   }
 }

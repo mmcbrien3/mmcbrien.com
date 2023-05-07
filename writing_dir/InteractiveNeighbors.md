@@ -7,11 +7,15 @@ layout: writing
 The following shows how regions would be classified based on the training data provided. The nodes (training
 data) can be moved by clicking on them and selecting a new space for them.
 
+<div id="knnCanvasContainerTemp" class="resizingCanvasContainer">
+<canvas id="knnCanvasTemp" class="resizingCanvas"></canvas>
+</div>
+
 <div id="knnCanvasContainer" class="resizingCanvasContainer">
 <canvas id="knnCanvas" class="resizingCanvas"></canvas>
 </div>
 
-<script src="./js/knn.js"></script>
+<script src="./js/knn.bundle.js"></script>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {

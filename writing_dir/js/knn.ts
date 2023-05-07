@@ -1,5 +1,9 @@
+import {gaussianRandom} from "./math_util";
+
 let knnCanvas: ResizingCanvas = document.getElementById('knnCanvas') as ResizingCanvas;
 let knnCtx: CanvasRenderingContext2D = knnCanvas.getContext('2d') as CanvasRenderingContext2D;
+let knnCanvasTemp: ResizingCanvas = document.getElementById('knnCanvasTemp') as ResizingCanvas;
+let knnCtxTemp: CanvasRenderingContext2D = knnCanvasTemp.getContext('2d') as CanvasRenderingContext2D;
 
 const NODE_RADIUS = 15;
 const ORIGINAL_CANVAS_SIZE = 500;
@@ -71,8 +75,11 @@ class KnnEnvironment {
     }
 
     drawAll() {
-        drawBackgroundKnn(this.canvas, this.ctx, nodes);
-        nodes.forEach(n => n.draw());
+        drawBackgroundKnn(this.canvas, this.ctx, this.nodes);
+        this.nodes.forEach(n => n.draw());
+        this.ctx.fillStyle = "red";
+        this.ctx.font = '16px Arial';
+        this.ctx.fillText(`K=${K}`, 5, 5);
     }
 }
 
@@ -157,24 +164,6 @@ class KnnNode {
 
 const nodes: KnnNode[] = [];
 
-const nodeDetails = [
-    {
-        classId: 'red',
-        color: '#ff0000',
-        count: 2
-    },
-    {
-        classId: 'blue',
-        color: '#0000ff',
-        count: 2
-    },
-    {
-        classId: 'green',
-        color: '#00ff00',
-        count: 2
-    },
-]
-
 const redClass = new KnnClassification('red', '#ff5555', '#dd3333');
 const blueClass = new KnnClassification('blue', '#8be9fd', '#69c7db ');
 const greenClass = new KnnClassification('green', '#50fa7b', '#30d859');
@@ -192,6 +181,21 @@ nodes.push(new KnnNode(.82, .52, greenClass, knnCanvas, knnCtx));
 nodes.push(new KnnNode(.69, .52, greenClass, knnCanvas, knnCtx));
 
 const knnEnvironment = new KnnEnvironment(knnCanvas, knnCtx, nodes);
+
+const nodesTemp: KnnNode[] = [];
+for (let i = 0; i < 20; i++) {
+    nodesTemp.push(new KnnNode(0.33 * gaussianRandom(1, 0.05), 0.33 * gaussianRandom(1, 0.05), redClass, knnCanvasTemp, knnCtxTemp));
+}
+
+for (let i = 0; i < 20; i++) {
+    nodesTemp.push(new KnnNode(0.8 * gaussianRandom(1, 0.05), 0.8 * gaussianRandom(1, 0.05), blueClass, knnCanvasTemp, knnCtxTemp));
+}
+
+for (let i = 0; i < 20; i++) {
+    nodesTemp.push(new KnnNode(0.9 * gaussianRandom(1, 0.05), 0.33 * gaussianRandom(1, 0.05), greenClass, knnCanvasTemp, knnCtxTemp));
+}
+
+const knnEnvironmentTemp = new KnnEnvironment(knnCanvasTemp, knnCtxTemp, nodesTemp);
 
 function drawBackgroundKnn(canvas: ResizingCanvas, ctx: CanvasRenderingContext2D, nodes: KnnNode[]) {
     for (let i = 0; i < canvas.width; i++) {
@@ -258,6 +262,10 @@ function getClassOfKNearestNeighbors(x: number, y: number, nodes: KnnNode[], k: 
 
 knnCanvas.customResize = () => {
     knnEnvironment.drawAll()
+}
+
+knnCanvasTemp.customResize = () => {
+    knnEnvironmentTemp.drawAll()
 }
 
 knnCanvas.addEventListener('click', function(event) {
