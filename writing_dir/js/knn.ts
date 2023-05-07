@@ -8,8 +8,6 @@ let knnCtxTemp: CanvasRenderingContext2D = knnCanvasTemp.getContext('2d') as Can
 const NODE_RADIUS = 15;
 const ORIGINAL_CANVAS_SIZE = 500;
 
-const K = 2;
-
 class KnnClassification {
     readonly classId: string;
     readonly nodeColor: string;
@@ -27,11 +25,13 @@ class KnnEnvironment {
     private selectedNode?: KnnNode;
     private canvas: ResizingCanvas;
     private ctx: CanvasRenderingContext2D;
+    private k: number = 2;
 
-    constructor(canvas: ResizingCanvas, ctx: CanvasRenderingContext2D, nodes: KnnNode[]) {
+    constructor(canvas: ResizingCanvas, ctx: CanvasRenderingContext2D, nodes: KnnNode[], k: number) {
         this.canvas = canvas;
         this.ctx = ctx;
         this.nodes = nodes;
+        this.k = k;
     }
 
     onClick(x: number, y: number) {
@@ -50,8 +50,8 @@ class KnnEnvironment {
             if (!isNodeSelected) {
                 this.drawAll();
                 const nearestNeighbors = orderNodesByDistance(x, y, this.nodes);
-                const maxDistance = nearestNeighbors[K-1].distance;
-                for (let i = 0; i < K; i++) {
+                const maxDistance = nearestNeighbors[this.k-1].distance;
+                for (let i = 0; i < this.k; i++) {
                     nearestNeighbors[i].node.setIsNearestNeighbor(true);
                     nearestNeighbors[i].node.draw();
                 }
@@ -75,11 +75,11 @@ class KnnEnvironment {
     }
 
     drawAll() {
-        drawBackgroundKnn(this.canvas, this.ctx, this.nodes);
+        drawBackgroundKnn(this.canvas, this.ctx, this.nodes, this.k);
         this.nodes.forEach(n => n.draw());
-        this.ctx.fillStyle = "red";
+        this.ctx.fillStyle = "black";
         this.ctx.font = '16px Arial';
-        this.ctx.fillText(`K=${K}`, 5, 5);
+        this.ctx.fillText(`K=${this.k}`, 15, 15);
     }
 }
 
@@ -180,7 +180,7 @@ nodes.push(new KnnNode(.77, .51, greenClass, knnCanvas, knnCtx));
 nodes.push(new KnnNode(.82, .52, greenClass, knnCanvas, knnCtx));
 nodes.push(new KnnNode(.69, .52, greenClass, knnCanvas, knnCtx));
 
-const knnEnvironment = new KnnEnvironment(knnCanvas, knnCtx, nodes);
+const knnEnvironment = new KnnEnvironment(knnCanvas, knnCtx, nodes, 2);
 
 const nodesTemp: KnnNode[] = [];
 for (let i = 0; i < 20; i++) {
@@ -195,12 +195,12 @@ for (let i = 0; i < 20; i++) {
     nodesTemp.push(new KnnNode(0.9 * gaussianRandom(1, 0.05), 0.33 * gaussianRandom(1, 0.05), greenClass, knnCanvasTemp, knnCtxTemp));
 }
 
-const knnEnvironmentTemp = new KnnEnvironment(knnCanvasTemp, knnCtxTemp, nodesTemp);
+const knnEnvironmentTemp = new KnnEnvironment(knnCanvasTemp, knnCtxTemp, nodesTemp, 5);
 
-function drawBackgroundKnn(canvas: ResizingCanvas, ctx: CanvasRenderingContext2D, nodes: KnnNode[]) {
+function drawBackgroundKnn(canvas: ResizingCanvas, ctx: CanvasRenderingContext2D, nodes: KnnNode[], k: number) {
     for (let i = 0; i < canvas.width; i++) {
         for (let j = 0; j < canvas.height; j++) {
-            const classification = getClassOfKNearestNeighbors(i, j, nodes, K)
+            const classification = getClassOfKNearestNeighbors(i, j, nodes, k)
             ctx.fillStyle = classification.regionColor;
             ctx.fillRect(i, j, 1, 1 );
         }
@@ -225,7 +225,7 @@ function orderNodesByDistance(x: number, y: number, nodes: KnnNode[]) {
     return distancesByClass;
 }
 
-function getClassOfKNearestNeighbors(x: number, y: number, nodes: KnnNode[], k: number = 2): KnnClassification {
+function getClassOfKNearestNeighbors(x: number, y: number, nodes: KnnNode[], k): KnnClassification {
     const distancesByClass = orderNodesByDistance(x, y, nodes);
     const nearestNeighborsByClass = new Map<string, number>()
     let mostNeighborsClass: KnnClassification | undefined;
