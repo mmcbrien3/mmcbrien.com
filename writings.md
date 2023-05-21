@@ -2,6 +2,7 @@
 layout: default
 ---
 # Writings
+- [K Nearest Neighbors Overview and Demo](./writing_dir/InteractiveNeighbors.html)
 - [The Story of the Site](./writing_dir/story_of_the_site_2023.html)
 - [A Brief Intro to Neural Nets (with interactive nets!)](./writing_dir/InteractiveNN.html)
 - [Monte Carlo Estimation of Pi](./writing_dir/MonteCarloPi.html)
