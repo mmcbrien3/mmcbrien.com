@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: writing 
 ---
 # Writings
 - [K Nearest Neighbors Overview and Demo](./writing_dir/InteractiveNeighbors.html)

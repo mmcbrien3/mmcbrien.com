@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: writing 
 ---
 # Shepherd's Pie
 
