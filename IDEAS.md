@@ -2,5 +2,5 @@
 
 - Work on rivers length blog
 - Add bad computer opponent to chess game
-- Move images to S3
-- KNN visualization blog
+- Fastest drop path fortnite blog
+- Minimizing feedback loops blog
