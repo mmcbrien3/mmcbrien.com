@@ -7,12 +7,12 @@ I am not a skilled cook. I want to change that. I am going to try to cook some d
 
 In each log, I will provide the following: an overview, a rating (1. how much I like the dish when it's good, and 2. how well I think I executed the dish), an ingredient's list, and some logs about how it all went and what to do differently next time.
 
- | 
--|-
+|-|-|
 ![](../../assets/fried_chicken_served.jpg)|![](../../assets/empanada_cooked_on_sheet.jpg)
 ![](../../assets/sp_baked.jpg)|![](../../assets/crockpot_chicken_breasts_down.jpg)
 
 ## Logs
+- [Brioche](./chefs_log/brioche.html)
 - [Crockpot Chicken](./chefs_log/crockpot_chicken.html)
 - [Beef Chili](./chefs_log/beef_chili.html)
 - [Empanadas](./chefs_log/empanadas.html)
