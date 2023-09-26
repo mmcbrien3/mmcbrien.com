@@ -6,7 +6,7 @@ layout: chefs_log_entry
 
 This is now a bread making page. I haven't had so much enjoyment out of making a food as I have out of this. There was much more effort and patience required than normal, but the process and the end result were both satisfying.
 
-I mostlfy followed [this recipe](https://www.theflavorbender.com/brioche-bread-recipe/) but I took inspiration when stuck from [this page]() as well
+I mostly followed [this recipe](https://www.theflavorbender.com/brioche-bread-recipe/) but I took inspiration when stuck from [this page]() as well
 
 Rating:
 
