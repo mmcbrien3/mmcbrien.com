@@ -25,7 +25,7 @@ Rating:
 - Honey
 - Salt
 - Sugar
-- Bread flour
+- ~~Bread flour~~ All purpose flour
 
 ### Logs
 
@@ -43,7 +43,7 @@ These two photos were taken during the firs proofing when I was trying to convin
 |-|-|
 ![](../../assets/brioche_proofing_first.png)|![](../../assets/brioche_proofing_second.png)
 
-To my great astonishment, when I awoke in the morning, the dough was much much larger and was just touching the seran wrap covering I had put on it. I left it in the fridge for the rest of the day and was hopeful I would have an edible bread.
+To my great astonishment, when I awoke in the morning, the dough was much much larger and was just touching the Saran wrap covering I had put on it. I left it in the fridge for the rest of the day and was hopeful I would have an edible bread.
 
 When I returned home that night, I turned out the dough and it was now much more workable than the night before. I was able to shape it into two loaves without too much trouble. I let the loaves sit in the covered bread pans for a few hours before returning. Again, I could tell the dough had risen in the pans! 
 

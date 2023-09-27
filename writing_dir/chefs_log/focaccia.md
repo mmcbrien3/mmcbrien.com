@@ -4,52 +4,51 @@ layout: chefs_log_entry
 
 # Focaccia
 
-I am happy to report that this is still [a bread making page](../brioche.html). This foccacia was delicious and very easy to make. Two thumbs way up.
+I am happy to report that this is still [a bread making page](../brioche.html). This focaccia was delicious and very easy to make. Two thumbs way up.
 
-I can confirm that Alexandra cooks, because [this was a good recipe](https://alexandracooks.com/2018/03/02/overnight-refrigerator-focaccia-best-focaccia/).
+I can confirm that Alexandra cooks, because [this was a good recipe](https://alexandracooks.com/2018/03/02/overnight-refrigerator-focaccia-best-focaccia/). 
+The fresh rosemary really seals the deal for me and makes this extra delicious.
 
 Rating:
 
 - Dish: A
-- Execution: B
+- Execution: A-
 
-![](../../assets/brioche_cut_open.png)
+![](../../assets/focaccia/focaccia_baked.jpg)
 
 ### Ingredients
 
-- Eggs
-- Instant yeast
-- Butter
-- Milk
-- Vanilla
-- Honey
-- Salt
-- Sugar
 - Bread flour
+- Salt
+- Yeast
+- Water
+- Butter
+- Olive oil
+- Rosemary leaves
 
 ### Logs
 
-I started on this journey confidently but that was shaken multiple times throughout. I have attempted making bread once before and instead of making a light, yummy loaf I made a dense, flat brick of flour. I was hoping for better this time.
-
-A big hurdle I had to clear was my lack of electric mixer of any kind -- hand or stand. This meant I mixed everything by hand. I would really not recommend this because there are steps of the recipe that require mixing on "medium speed" on a stand mixer for tens of minutes. My arms were exhausted and I certainly did not mix this as thoroughly as I needed to. Nevertheless, I worked as hard as I could until I decided I had technically reached the necessary criteria for stopping. The recipes say you are done mixing when you can pull on the dough and it stays together long enough and becomes thing enough that a bit of light can be seen through the dough. This is dubbed the "window pane" test. My dough would've gotten a D- on the window pane test, but I figured that was better than an F and my arms were too sore to continue.
-
-|-|-|
-![](../../assets/brioche_yeast.png)|![](../../assets/brioche_pre_mixing.png)
-
-The next step was a two hour proof at room temperature. The recipe instructed me to shape dough into a ball and put it into a container that is large enough for it to triple in size. While my dough was so gloppy that it was hard to shape into a ball, I was hopeful that the proof would be in the proofing. After about 70 minutes of proofing, my dough had not moved at all. I decided I should take it out of the bowl and try to re-shape it into a bowl. I threw it onto a floured surface hoping a bit of extra flour would make things easier. This was a huge failure and resulted in sticky hands and an unruly mess remaining. I threw everything back in the bowl and considered throwing the concotion in the trash. I decided I might as well follow the next step since it was just to cover it and put it in the fridge overnight.
-
-These two photos were taken during the firs proofing when I was trying to convince myself something was changing. As you can tell, they look quite similar.
+I am not a baker by any means, but I would say this is a good bread to start with to get your toes wet. You will have to proof for some time, but there
+aren't any complicated ingredients and you will avoid strenuous kneading and mixing that some other breads (cough: *brioche*) require. It even has the
+added benefit that making the dough all bubbly right before baking is certified fun.
 
 |-|-|
-![](../../assets/brioche_proofing_first.png)|![](../../assets/brioche_proofing_second.png)
+![](../../assets/focaccia/focaccia_unmixed.jpg)|![](../../assets/focaccia/focaccia_mixing.jpg)
 
-To my great astonishment, when I awoke in the morning, the dough was much much larger and was just touching the seran wrap covering I had put on it. I left it in the fridge for the rest of the day and was hopeful I would have an edible bread.
+Another benefit is that the proofing, at least in my case, was quite extreme in the fridge. It feels rewarding to put a little dough ball into the fridge
+for the night and to wake to find the thing breathing like a lung.
 
-When I returned home that night, I turned out the dough and it was now much more workable than the night before. I was able to shape it into two loaves without too much trouble. I let the loaves sit in the covered bread pans for a few hours before returning. Again, I could tell the dough had risen in the pans! 
+|-|-|
+![](../../assets/focaccia/focaccia_pre_fridge_proof.jpg)|![](../../assets/focaccia/focaccia_post_fridge_proof.jpg)
 
-![](../../assets/brioche_formed_in_pans.png)
+I was a bit lost when I was reaching the final steps of the recipe. Once the dough has proofed at room temperature in the pan and filled up the space,
+the directions say to grease your fingers with the oil and then stick them into the dough to create dimples and bubbles. This didn't compute for me. 
+I looked at the before and after pictures but couldn't understand how pressing into the bread would create the bubbles. My sister reassured me over the phone
+that this was normal and would work. Have faith.
 
-I applied an egg wash and baked at 325 degrees for ~40 minutes. Again to my amazement popped out two beautiful loaves of bread. They even tasted quite good. Ultimately, I think my bread was still a bit thicker than normal brioche and it definitely had a bit of an extra egg taste. But the freshness still made it delicious. I'll try again soon, this time with electricity on my side.
+|-|-|
+![](../../assets/focaccia/focaccia_preproof.jpg)|![](../../assets/focaccia/focaccia_bubbly.jpg)
 
-|-|-|-|
-![](../../assets/brioche_first_loaf.png)|![](../../assets/brioche_second_loaf.png)|![](../../assets/brioche_with_jelly.png)
+Throw it in the oven and enjoy the smells, the taste, and the crunch of your delicious focaccia.
+
+![](../../assets/focaccia/focaccia_final.jpg)

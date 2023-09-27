@@ -12,6 +12,7 @@ In each log, I will provide the following: an overview, a rating (1. how much I 
 ![](../../assets/sp_baked.jpg)|![](../../assets/crockpot_chicken_breasts_down.jpg)
 
 ## Logs
+- [Focaccia](./chefs_log/focaccia.html)
 - [Brioche](./chefs_log/brioche.html)
 - [Crockpot Chicken](./chefs_log/crockpot_chicken.html)
 - [Beef Chili](./chefs_log/beef_chili.html)
