@@ -11,7 +11,7 @@ I followed the pad thai recipe [here](https://tastesbetterfromscratch.com/pad-th
   - Dish: A+
   - Execution: C-
 
-![](../../assets/pad_thai_final.png)
+![](../../assets/pad_thai/pad_thai_final.png)
 
 ### Ingredients
 
@@ -40,14 +40,14 @@ I was surprised to see some of these ingredients on the list, specifically the b
 I am continuing to have issues with cooking rice noodles. While I haven't done it many times in the past, they are never coming out quite right; in truth, they are closer to quite wrong. While it doesn't seem like it when the noodles are evacuated from the packaging, they love to stick together once they are put into the pot. If they stick together it will ruin them for multiple reasons: 1) they will be thicker than you want and won't be as handlable as you'd like and 2) they will not cook evenly, leaving some unappetizing, hard parts of the rice noodle.
 
 |-|-|
-![](../../assets/pad_thai_sauce.png)|![](../../assets/pad_thai_noodles.png)
+![](../../assets/pad_thai/pad_thai_sauce.png)|![](../../assets/pad_thai/pad_thai_noodles.png)
 
 The timing of the cooking was suboptimal. We let the chicken sit in the pan for too long before adding the peppers. The peppers were not bad, but they could've done with slightly more cooking.
 
 Another big miss of this recipe was our use of oil. We didn't add nearly enough at the beginning and then did not add any more before adding the later ingredients. Nothing in the meal was really "fried". This far from ruined the meal but was a big miss that can be improved in the future. I think the pan and oil should be extremely hot when adding more ingredients.
 
 |-|-|
-![](../../assets/pad_thai_chicken.png)|![](../../assets/pad_thai_eggs.png)
+![](../../assets/pad_thai/pad_thai_chicken.png)|![](../../assets/pad_thai/pad_thai_eggs.png)
 
 Cooking pad thai in any significant quantity will make you understand why woks are traditioanlly used in its preparation. Using a plain pan does not provide the surface area or volume that you'll want when you add a huge batch of rice noodles to a heap of chicken and eggs.
 
