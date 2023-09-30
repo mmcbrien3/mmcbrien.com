@@ -2,7 +2,7 @@
 layout: chefs_log_entry 
 ---
 
-# Crockpot Chicken 
+# Crockpot Chicken (March 2022)
 
 Making a whole chicken sounds daunting, but with a big enough crockpot, anything is possible. Waiting is the hardest part of this recipe!
 

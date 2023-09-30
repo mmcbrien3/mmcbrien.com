@@ -2,7 +2,7 @@
 layout: chefs_log_entry
 ---
 
-# Brioche
+# Brioche (September 2023)
 
 This is now a bread making page. I haven't had so much enjoyment out of making a food as I have out of this. There was much more effort and patience required than normal, but the process and the end result were both satisfying.
 

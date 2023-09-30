@@ -1,7 +1,7 @@
 ---
 layout: chefs_log_entry 
 ---
-# Shepherd's Pie
+# Shepherd's Pie (December 2021)
 
 I'm not sure I'd ever had shepherd's pie before I made it for this entry of the chef's log, but the thought of a Guinness and shepherd's pie aroused a pastoral memory from deep within me.
 

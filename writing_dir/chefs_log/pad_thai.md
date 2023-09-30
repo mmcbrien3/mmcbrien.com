@@ -1,7 +1,7 @@
 ---
 layout: chefs_log_entry 
 ---
-# Pad thai
+# Pad thai (October 2021)
 
 For the first dish of the cooking journey, we are doing pad thai. Pad thai is easy to prepare and supremely delicious.
 

@@ -2,7 +2,7 @@
 layout: chefs_log_entry
 ---
 
-# Focaccia
+# Focaccia (September 2023)
 
 I am happy to report that this is still [a bread making page](../brioche.html). This focaccia was delicious and very easy to make. Two thumbs way up.
 

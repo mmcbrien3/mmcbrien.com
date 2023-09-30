@@ -2,7 +2,7 @@
 layout: chefs_log_entry 
 ---
 
-# Beef Chili 
+# Beef Chili (March 2022)
 
 There is nothing like a big bowl of beef chili, smothered in shredded cheese, and garnished with a large roll. I never feel a need for the beans, and I didn't include them in this dish.
 

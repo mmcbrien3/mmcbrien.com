@@ -1,7 +1,7 @@
 ---
 layout: chefs_log_entry 
 ---
-# Hot Chocolate
+# Hot Chocolate (November 2021)
 
 Hot chocolate on Thanksgiving may not be an age-old tradition, but it is delicious and sweet.
 

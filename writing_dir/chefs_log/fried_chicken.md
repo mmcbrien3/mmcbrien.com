@@ -1,7 +1,7 @@
 ---
 layout: chefs_log_entry 
 ---
-# Fried Chicken
+# Fried Chicken (November 2021)
 
 Is there anything better than a crispy, juicy piece of fried chicken? Probably, but fried chicken is pretty good.
 

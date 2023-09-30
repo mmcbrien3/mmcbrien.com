@@ -2,7 +2,7 @@
 layout: chefs_log_entry 
 ---
 
-# Empanadas
+# Empanadas (February 2022)
 
 I realized when I was making these small puffs of dough and meat, that they are a lot like those hand pies you find sometimes, typically filled with some sugar and some fruit. I am thinking now of the McDonald's apple pies, that are flaky and sweet and come wrapped in a paper box like a Christmas present. It was no surprise then that the translation of "empanada" - besides the first translation of just empanada - is turnover or pie.
 
