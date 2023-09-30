@@ -7,9 +7,9 @@ I'm not sure I'd ever had shepherd's pie before I made it for this entry of the 
 
 I followed [this recipe](https://www.foodnetwork.com/recipes/alton-brown/shepherds-pie-recipe2-1942900) from the food network
 
-- Ratings
-  - Dish: A+
-  - Execution: A-
+Rating:
+- Dish: A+
+- Execution: A-
 
 ![](../../assets/shepherds_pie/sp_baked.jpg)
 

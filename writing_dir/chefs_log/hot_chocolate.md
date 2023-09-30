@@ -7,9 +7,9 @@ Hot chocolate on Thanksgiving may not be an age-old tradition, but it is delicio
 
 I followed a recipe from [this website](https://celebratingsweets.com/homemade-hot-chocolate/).
 
-- Ratings
-  - Dish: A
-  - Execution: A
+Rating:
+- Dish: A
+- Execution: A
 
 ![](../../assets/hot_chocolate/hot_chocolate_final.png)
 

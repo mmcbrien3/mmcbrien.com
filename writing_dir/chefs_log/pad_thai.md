@@ -7,9 +7,9 @@ For the first dish of the cooking journey, we are doing pad thai. Pad thai is ea
 
 I followed the pad thai recipe [here](https://tastesbetterfromscratch.com/pad-thai/) (mostly).
 
-- Ratings
-  - Dish: A+
-  - Execution: C-
+Rating:
+- Dish: A+
+- Execution: C-
 
 ![](../../assets/pad_thai/pad_thai_final.png)
 

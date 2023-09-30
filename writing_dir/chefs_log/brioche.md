@@ -9,7 +9,6 @@ This is now a bread making page. I haven't had so much enjoyment out of making a
 I mostly followed [this recipe](https://www.theflavorbender.com/brioche-bread-recipe/) but I took inspiration when stuck from [this page]() as well
 
 Rating:
-
 - Dish: A
 - Execution: B
 

@@ -14,9 +14,9 @@ reaping wheat to mill the flour.
 Anyways, I usually come back to [this recipe](https://sallysbakingaddiction.com/homemade-pizza-crust-recipe/#tasty-recipes-66436) to get the measurements for the dough right. They conveniently add
 the weights of the ingredients, which I now think all recipes should do now that I own a scale.
 
-- Ratings
-  - Dish: A+
-  - Execution: A-
+Rating:
+- Dish: A+
+- Execution: A-
 
 ### Ingredients
 #### Dough

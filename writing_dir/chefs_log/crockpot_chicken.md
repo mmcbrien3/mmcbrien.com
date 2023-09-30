@@ -9,8 +9,8 @@ Making a whole chicken sounds daunting, but with a big enough crockpot, anything
 I very loosely followed [this recipe](https://www.thewholesomedish.com/the-best-classic-chili/)
 
 Rating:
-  - Dish: A-
-  - Execution: A-
+- Dish: A-
+- Execution: A-
 
 ![](../../assets/crockpot_chicken/crockpot_chicken_final.jpg)
 

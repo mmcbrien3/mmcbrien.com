@@ -9,9 +9,9 @@ I followed a basic recipe from [food network](https://www.foodnetwork.com/recipe
 
 My mom also made some shell mac & cheese, but I won't be talking about that in this post.
 
-- Ratings
-  - Dish: A+
-  - Execution: B+
+Rating:
+- Dish: A+
+- Execution: B+
 
 ![](../../assets/fried_chicken/fried_chicken_final.jpg)
 

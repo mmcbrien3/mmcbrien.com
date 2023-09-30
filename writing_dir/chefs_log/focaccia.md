@@ -10,7 +10,6 @@ I can confirm that Alexandra cooks, because [this was a good recipe](https://ale
 The fresh rosemary really seals the deal for me and makes this extra delicious.
 
 Rating:
-
 - Dish: A
 - Execution: A-
 

@@ -8,9 +8,9 @@ I realized when I was making these small puffs of dough and meat, that they are 
 
 I followed [this recipe](https://themodernproper.com/beef-empanadas).
 
-- Rating
-  - Dish: A
-  - Execution: C+
+Rating:
+- Dish: A
+- Execution: C+
 
 ![](../../assets/empanada/empanada_final_cut.jpg)
 

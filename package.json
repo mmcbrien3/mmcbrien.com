@@ -11,7 +11,8 @@
     "babel": "find . -name '*.ts' -not -path './node_modules/*' | xargs -I {} babel {} --extensions .ts --out-dir ./ --relative",
     "build": "npm run babel && npm run jekyll && npm run babel_clean && npm run webpack",
     "serve": "http-server _site/",
-    "release": "npm run clean && npm run build && npm run serve"
+    "release": "npm run clean && npm run build && npm run serve",
+    "convert_iphone_images": "sh ./bin/convert_dir_of_iphone_images.sh"
   },
   "repository": {
     "type": "git",

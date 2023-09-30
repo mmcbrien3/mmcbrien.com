@@ -9,8 +9,8 @@ There is nothing like a big bowl of beef chili, smothered in shredded cheese, an
 I followed [this recipe](https://www.thewholesomedish.com/the-best-classic-chili/)
 
 Rating:
-  - Dish: A-
-  - Execution: B+
+- Dish: A-
+- Execution: B+
 
 ![](../../assets/chili/chili_final.jpg)
 
