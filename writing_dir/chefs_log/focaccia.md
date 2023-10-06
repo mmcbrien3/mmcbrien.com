@@ -4,7 +4,7 @@ layout: chefs_log_entry
 
 # Focaccia (September 2023)
 
-I am happy to report that this is still [a bread making page](../brioche.html). This focaccia was delicious and very easy to make. Two thumbs way up.
+I am happy to report that this is still [a bread making page](./brioche.html). This focaccia was delicious and very easy to make. Two thumbs way up.
 
 I can confirm that Alexandra cooks, because [this was a good recipe](https://alexandracooks.com/2018/03/02/overnight-refrigerator-focaccia-best-focaccia/). 
 The fresh rosemary really seals the deal for me and makes this extra delicious.
