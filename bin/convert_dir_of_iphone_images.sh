@@ -6,7 +6,7 @@ DIRECTORY=$1
 
 cd $DIRECTORY
 
-heic_count=`ls -1 *.flac 2>/dev/null | wc -l`
+heic_count=`ls -1 *.heic 2>/dev/null | wc -l`
 
 if [ $heic_count -eq "0" ]; then
     echo "There are no .heic files in the directory!" && exit 1
