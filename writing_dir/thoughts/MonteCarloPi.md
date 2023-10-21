@@ -1,5 +1,5 @@
 ---
-layout: writing
+layout: thoughts_entry
 ---
 ## Monte Carlo Pi Calculation
 

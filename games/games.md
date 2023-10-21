@@ -1,8 +1,6 @@
 ---
 layout: default
 ---
-# Games
-
 ### [Chess](./chess/)
 Play by yourself, alone in the vast, interconnected web.
 

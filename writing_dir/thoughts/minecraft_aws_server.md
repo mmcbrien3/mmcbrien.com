@@ -1,5 +1,5 @@
 ---
-layout: writing
+layout: thoughts_entry
 ---
 ## How to host a Minecraft Server on AWS
 

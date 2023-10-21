@@ -1,5 +1,5 @@
 ---
-layout: writing 
+layout: thoughts_entry 
 ---
 ## Brains vs. Brawn: A footnote on GPUs and the Discrete Cosine Transform
 

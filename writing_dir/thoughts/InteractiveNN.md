@@ -1,5 +1,5 @@
 ---
-layout: writing
+layout: thoughts_entry
 ---
 ## A Brief Intro to Neural Nets
 ### with interactive nets!
@@ -72,7 +72,7 @@ $$
 \text{hyperbolicTan}(x) = \tanh(x)
 $$
 
-<img src='../assets/interactiveNnActivationFunctions.png' style="width: 90%;
+<img src='/assets/interactiveNnActivationFunctions.png' style="width: 90%;
   margin: auto;
   display: block;">
 
@@ -115,7 +115,7 @@ connection has an upstream value of `0.1` and an weight of `2.0`.
 The node has a bias of `0.05` and the activation function being used in the "hyperbolic tan".
 With all of this, we can calculate the value of the node.
 
-<img src='../assets/interactiveNnExampleActivation.jpg' style="width: 60%;
+<img src='/assets/interactiveNnExampleActivation.jpg' style="width: 60%;
   margin: auto;
   display: block;">
 

@@ -1,5 +1,5 @@
 ---
-layout: writing
+layout: thoughts_entry
 ---
 
 ## Interactive K Nearest Neighbors
@@ -24,7 +24,7 @@ following image shows a visualization of KNN. The circles are the provided data 
 to their class. The background color indicates how that point would be classified by KNN. The value of `K` is 5
 in this case.
 
-![](../assets/knnLargeExample.png)
+![](/assets/knnLargeExample.png)
 
 The following charts visualize how the voting system works more clearly. In this case, `K` is set to 2. For the first
 image, we see that the point is classified as the Red class because the two nearest neighbors are both Red. In the
@@ -32,8 +32,8 @@ second case, the two nearest neighbors are Green and Blue. Since no single class
 be classified -- so is colored as grey.
 
 <table><tr>
-<td> <img src="../assets/knnVotingWin.png"/> </td>
-<td> <img src="../assets/knnVotingTie.png"/> </td>
+<td> <img src="/assets/knnVotingWin.png"/> </td>
+<td> <img src="/assets/knnVotingTie.png"/> </td>
 </tr></table>
 
 KNN can handle any number of features, but if we have more than two, the visualization breaks down.

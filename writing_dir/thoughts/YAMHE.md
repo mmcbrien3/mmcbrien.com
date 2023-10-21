@@ -1,8 +1,8 @@
 ---
-layout: writing
+layout: thoughts_entry
 ---
 
-![](../assets/monty_hall_splash.png)
+![](/assets/monty_hall_splash.png)
 
 #### June 13th, 2021
 
@@ -11,19 +11,19 @@ In this post, I will go over the basics of the Monty Hall problem and dive into 
 ## Background
 The Monty Hall Problem comes from the game show *Let's Make a Deal*. During the show, the host, the titular Monty Hall, presents the contestants with three doors. Two of the doors each hide a goat, and behind one door is a car. The contestant's goal is to select the door that hides the car, but there is a bit of a twist.
 
-![](../assets/game_setup.png)
+![](/assets/game_setup.png)
 
 First, the contestant selects one of the doors. 
 
-![](../assets/selection.png)
+![](/assets/selection.png)
 
 Next, Monty Hall opens up one of the two unselected doors. Monty will always open up a door with a goat behind it. If the contestant has already selected a door with a goat, Monty Hall is forced to open the only other door with a goat. If the contestant has initially selected the door with the car behind it, Monty will randomly select one of the other doors (both with goats) to open.
 
-![](../assets/revelation.png)
+![](/assets/revelation.png)
 
 At this point, the contestant is given another choice: they can either stay with their current door or they can switch to the other unopened door. The contestant can either *stay* or *switch*.
 
-![](../assets/final_question.png)
+![](/assets/final_question.png)
 
 So here's the question: what is the best strategy for the contestant to use if they want to maximize their chances of winning the car? Should you always stay or should you always switch? Or does it not matter? Is this decision actually a non-choice presented by an old game show to throw in a bit of excitement?
 
@@ -101,7 +101,7 @@ While writing up this article, I simulated all of the contestant and host strate
 - Switch Strategy:
   - For this strategy, we have to consider different probabilities. If the contestant didn't select the car (`n-1/n` chance of this), then the likelihood of winning is `1/n-2` (`n-2` in this case because the contestant knows the car isn't behind the selected door or the revealed door.). If the contestant did select the car (`1/n` chance of this), then they have no chance of winning. This results in the ultimate odds of (`1/n * 0 + (n-1)/n * 1/(n-2) = (n-1)/(n*(n-2))`. If we plug in 3 for `n` like in the normal variation of the game, we can see the odds work out to what we calculated above: `(3-1)/(3*(3-2) = 2/(3*1) = 2/3`.
 
-![](../assets/monty_hall_graph.png)
+![](/assets/monty_hall_graph.png)
 **Figure 1.** This chart shows the probability of winning against Monty Hall when employing the three strategies discussed with a variable amount of doors. The upper plot shows the theoretical effectiveness, and the lower plot shows the empirical effectiveness after simulating the game 1,000,000 times with each strategy and each number of doors. You can see that the effeciveness of the three strategies converges as `n` approches infinity.
 
 ## Code

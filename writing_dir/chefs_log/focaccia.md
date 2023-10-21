@@ -13,7 +13,7 @@ Rating:
 - Dish: A
 - Execution: A-
 
-![](../../assets/focaccia/focaccia_baked.jpg)
+![](/assets/focaccia/focaccia_baked.jpg)
 
 ### Ingredients
 
@@ -32,13 +32,13 @@ aren't any complicated ingredients and you will avoid strenuous kneading and mix
 added benefit that making the dough all bubbly right before baking is certified fun.
 
 |-|-|
-![](../../assets/focaccia/focaccia_unmixed.jpg)|![](../../assets/focaccia/focaccia_mixing.jpg)
+![](/assets/focaccia/focaccia_unmixed.jpg)|![](/assets/focaccia/focaccia_mixing.jpg)
 
 Another benefit is that the proofing, at least in my case, was quite extreme in the fridge. It feels rewarding to put a little dough ball into the fridge
 for the night and to wake to find the thing breathing like a lung.
 
 |-|-|
-![](../../assets/focaccia/focaccia_pre_fridge_proof.jpg)|![](../../assets/focaccia/focaccia_post_fridge_proof.jpg)
+![](/assets/focaccia/focaccia_pre_fridge_proof.jpg)|![](/assets/focaccia/focaccia_post_fridge_proof.jpg)
 
 I was a bit lost when I was reaching the final steps of the recipe. Once the dough has proofed at room temperature in the pan and filled up the space,
 the directions say to grease your fingers with the oil and then stick them into the dough to create dimples and bubbles. This didn't compute for me. 
@@ -46,8 +46,8 @@ I looked at the before and after pictures but couldn't understand how pressing i
 that this was normal and would work. Have faith.
 
 |-|-|
-![](../../assets/focaccia/focaccia_preproof.jpg)|![](../../assets/focaccia/focaccia_bubbly.jpg)
+![](/assets/focaccia/focaccia_preproof.jpg)|![](/assets/focaccia/focaccia_bubbly.jpg)
 
 Throw it in the oven and enjoy the smells, the taste, and the crunch of your delicious focaccia.
 
-![](../../assets/focaccia/focaccia_final.jpg)
+![](/assets/focaccia/focaccia_final.jpg)

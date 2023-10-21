@@ -8,8 +8,8 @@ I am not a skilled cook. I want to change that. I am going to try to cook some d
 In each log, I will provide the following: an overview, a rating (1. how much I like the dish when it's good, and 2. how well I think I executed the dish), an ingredient's list, and some logs about how it all went and what to do differently next time.
 
 |-|-|
-![](../../assets/fried_chicken/fried_chicken_served.jpg)|![](../../assets/empanada/empanada_cooked_on_sheet.jpg)
-![](../../assets/shepherds_pie/sp_baked.jpg)|![](../../assets/crockpot_chicken/crockpot_chicken_breasts_down.jpg)
+![](/assets/fried_chicken/fried_chicken_served.jpg)|![](/assets/empanada/empanada_cooked_on_sheet.jpg)
+![](/assets/shepherds_pie/sp_baked.jpg)|![](/assets/crockpot_chicken/crockpot_chicken_breasts_down.jpg)
 
 ## Logs
 - [Pizza](./chefs_log/pizza.html)

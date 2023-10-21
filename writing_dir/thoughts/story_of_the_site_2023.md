@@ -1,8 +1,8 @@
 ---
-layout: writing 
+layout: thoughts_entry 
 ---
 
-![](.././assets/howItsMade.png)
+![](/assets/howItsMade.png)
 
 #### April 24th, 2023
 
