@@ -12,6 +12,7 @@ In each log, I will provide the following: an overview, a rating (1. how much I 
 ![](/assets/shepherds_pie/sp_baked.jpg)|![](/assets/crockpot_chicken/crockpot_chicken_breasts_down.jpg)
 
 ## Logs
+- [Garlic Naan](./chefs_log/garlic_naan.html)
 - [Pizza](./chefs_log/pizza.html)
 - [Chocolate Chip Cookies](./chefs_log/chocolate_chip_cookies.html)
 - [Focaccia](./chefs_log/focaccia.html)
