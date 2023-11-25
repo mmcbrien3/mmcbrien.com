@@ -67,7 +67,7 @@ classified due to ties in the KNN algorithm?
 <canvas id="knnCanvas" class="resizingCanvas"></canvas>
 </div>
 
-<script src="./js/knn.bundle.js"></script>
+<script src="../js/knn.bundle.js"></script>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
