@@ -20,7 +20,7 @@ Rating
 - Dish: A+
 - Execution: B-
 
-![](../../assets/hard_cider/bottled_cider.jpg)
+![](/assets/hard_cider/bottled_cider.jpg)
 
 ## Ingredients
 - Montrachet yeast
@@ -47,7 +47,7 @@ The sanitization goes farther when you use real fruit as your base for the drink
 Once I had cleaned all of my equipment, I was ready to get mixing. To start, I mixed in the cider and some extra sugar. Adding more sugar essentially just makes the brew more alcoholic. The sugar in the drink will be consumed by the yeast and converted into CO2 and alcohol &mdash; more sugar means more alcohol.
 
 |-|-|
-![](../../assets/hard_cider/wine_thief_in_bucket.jpg)|![](../../assets/hard_cider/cleaned_equipment.jpg)
+![](/assets/hard_cider/wine_thief_in_bucket.jpg)|![](/assets/hard_cider/cleaned_equipment.jpg)
 
 I added my gallon of cider from the store and added `0.4` pounds of sugar (181 grams). This is following EdWort's instructions from above, except scaling it back for only making a single gallon. Then I stirred everything together to absorb the sugar.
 
@@ -58,7 +58,7 @@ I then pitched the yeast, which means to sprinkle the yeast over the drink but n
 My first major mistake came while pitching. I forgot that I had reduced the recipe from 5 gallons to 1 gallon. However, I did not investigate or even think about how that should change how much yeast to include. I simply pitched the entire 5 gram packet &mdash; the suggested amount for a 5 gallon brew. Again, this worked for me, but I'll probably try reducing this in the future.
 
 |-|-|
-![](../../assets/hard_cider/pitched_wine.jpg)|![](../../assets/hard_cider/hydrometer_measurement.jpg)
+![](/assets/hard_cider/pitched_wine.jpg)|![](/assets/hard_cider/hydrometer_measurement.jpg)
 
 With the yeast pitched, the bucket was sealed up and the airlock installed. The airlock was filled with gin to ensure proper sterilization of the liquid.
 
@@ -69,14 +69,14 @@ As the fermentation started, I noticed it was developing at the quicker end of t
 I ended up racking after 11 days in primary. Racking is the process of moving the brew from the primary fermenter (the first bucket) to the secondary fermenter. The secondary fermentation usually lasts longer (this is what you might leave it in for months to age it) and must be in an airtight container (glass, not plastic).
 
 |-|-|
-![](../../assets/hard_cider/bucket_in_cabinet.jpg)|![](../../assets/hard_cider/primary_complete.jpg)
+![](/assets/hard_cider/bucket_in_cabinet.jpg)|![](/assets/hard_cider/primary_complete.jpg)
 
 I performed the racking using a siphon, placing the bucket on top of my dresser and the glass carboy at my feet. Another learning here was that I should've practiced using the siphon multiple times with just plain water before performing it with the cider. There is a bit of a skill to develop and if you get it right, the process is quite easy. Otherwise, if you mess it up and you are on your own, you will find yourself fiddling with a spigot that is spewing your cider onto your feet (or so I have heard).
 
 Before doing the racking, I ensured the fermentation had occurred with another measurement from the hydrometer and I did a little taste test of the immature cider. I was happy to find that it was still quite drinkable and clearly had a small level of alcohol in it (both from the taste and the from the flotation of the hydrometer).
 
 |-|-|
-![](../../assets/hard_cider/syphon_preparation.jpg)|![](../../assets/hard_cider/hydrometer_measurement_done.jpg)
+![](/assets/hard_cider/syphon_preparation.jpg)|![](/assets/hard_cider/hydrometer_measurement_done.jpg)
 
 With racking and testing completed, I was excited for time to pass, flavors to develop, and cider to be ready.
 
@@ -87,7 +87,7 @@ I had a bit of experimentation in mind when performing the bottling. I planned t
 - Did the cider in the corked bottle improve, when compared to the uncarbonated cider, if it was left around for long enough?
 
 |-|-|
-![](../../assets/hard_cider/prepared_bottles.jpg)|![](../../assets/hard_cider/pre_carbonation.jpg)
+![](/assets/hard_cider/prepared_bottles.jpg)|![](/assets/hard_cider/pre_carbonation.jpg)
 
 I used the "back carbonation" method. In this method, you put a bit more sugar into the cider during bottling. The extra sugar will be consumed by the latent yeast. However, since the bottle is in an airtight container, the CO2 cannot escape and will be forced into the liquid. I made some simple sugar using brown sugar and boiling water, adding this to two of the bottles before siphoning in the cider.
 
@@ -103,6 +103,6 @@ Overall, I greatly enjoyed this process. It was a bit intimidating to get underw
 
 When I make cider again, I will definitely try to add some more interesting flavor notes into the brew. Maybe some nutmeg or cinnamon &mdash; something to give the drink a distinctive flavor that will stick with people. I received lots of compliments on the cider, but most of the compliments were a product of people's shock that someone had actually produced alcohol.
 
-![](../../assets/hard_cider/in_glass.jpg)
+![](/assets/hard_cider/in_glass.jpg)
 
 Life is short. Produce alcohol.
