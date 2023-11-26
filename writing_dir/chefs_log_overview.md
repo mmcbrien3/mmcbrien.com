@@ -25,3 +25,11 @@ In each log, I will provide the following: an overview, a rating (1. how much I 
 - [Hot Chocolate](./chefs_log/hot_chocolate.html)
 - [Fried Chicken](./chefs_log/fried_chicken.html)
 - [Pad Thai](./chefs_log/pad_thai.html)
+
+## To Make & Publish
+- Cacio e Pepe
+- Chicken Curry
+- Vegetable Stew
+- Mead
+- Lasagna
+- French bread
