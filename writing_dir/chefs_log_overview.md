@@ -33,3 +33,4 @@ In each log, I will provide the following: an overview, a rating (1. how much I 
 - Mead
 - Lasagna
 - French bread
+- Pita bread (and chips)
