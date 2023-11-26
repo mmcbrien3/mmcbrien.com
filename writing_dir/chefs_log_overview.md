@@ -34,4 +34,4 @@ In each log, I will provide the following: an overview, a rating (1. how much I 
 - Lasagna
 - French bread
 - Pita bread (and chips)
-- Carne asado tacos with homemade tortillas
+- Carne asada tacos with homemade tortillas
