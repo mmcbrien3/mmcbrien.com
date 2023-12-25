@@ -12,6 +12,7 @@ In each log, I will provide the following: an overview, a rating (1. how much I 
 ![](/assets/shepherds_pie/sp_baked.jpg)|![](/assets/crockpot_chicken/crockpot_chicken_breasts_down.jpg)
 
 ## Logs
+- [Cacio e Pepe](./chefs_log/cacio_e_pepe.html)
 - [Hard Cider](./chefs_log/hard_cider.html)
 - [Garlic Naan](./chefs_log/garlic_naan.html)
 - [Pizza](./chefs_log/pizza.html)
@@ -27,7 +28,7 @@ In each log, I will provide the following: an overview, a rating (1. how much I 
 - [Pad Thai](./chefs_log/pad_thai.html)
 
 ## To Make & Publish
-- Cacio e Pepe
+- Raisin bread
 - Chicken Curry
 - Vegetable Stew
 - Mead
