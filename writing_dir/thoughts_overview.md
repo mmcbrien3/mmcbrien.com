@@ -2,6 +2,7 @@
 layout: writing
 ---
 
+- [Ric Flair; or, The Belt](./thoughts/ric_flair.html)
 - [K Nearest Neighbors Overview and Demo](./thoughts/InteractiveNeighbors.html)
 - [The Story of the Site](./thoughts/story_of_the_site_2023.html)
 - [A Brief Intro to Neural Nets (with interactive nets!)](./thoughts/InteractiveNN.html)

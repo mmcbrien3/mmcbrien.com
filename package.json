@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Matt McBrien's personal website",
   "scripts": {
-    "install-reqs": "gem install bundler && bundle install && npm install",
+    "install-reqs": "gem install -n /usr/local/bin bundler && bundle install && npm install",
     "webpack": "webpack",
     "clean": "rm -rf _site/ && npm run babel_clean | exit 0",
     "jekyll": "bundle exec jekyll build",
