@@ -3,7 +3,7 @@ layout: default
 ---
 ## Welcome to my static website!
 
-I am a Software Development Engineer for [AWS Lambda](https://aws.amazon.com/lambda/). My team works on improving the customer experience for [Event Invokes](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html).
+I am a Software Development Engineer at [Amazon](https://www.amazon.com/). I build web services. I was previously with [AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html).
 
 ## Professional Information
 
