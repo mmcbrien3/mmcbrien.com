@@ -2,6 +2,7 @@
 layout: writing
 ---
 
+- [These things happen](./thoughts/theseThingsHappen.html)
 - [Ric Flair; or, The Belt](./thoughts/ric_flair.html)
 - [K Nearest Neighbors Overview and Demo](./thoughts/InteractiveNeighbors.html)
 - [The Story of the Site](./thoughts/story_of_the_site_2023.html)

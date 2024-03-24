@@ -6,7 +6,7 @@ layout: thoughts_entry
 
 ### A Melvillian Review of Durkin's 2023 *The Iron Claw*
 
-#### January 10th, 2023
+#### January 10th, 2024
 
 *The Iron Claw* is a film written and directed by Sean Durkin. Told from the perspective
 of Kevin Von Erich, it follows the obsession of his father, Fritz Von Erich, with 
