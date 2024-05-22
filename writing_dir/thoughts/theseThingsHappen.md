@@ -19,7 +19,7 @@ A lover has slipped through our grasp, disappearing between the cracks that appe
 because our grip was so tight. The means of our defeat arising from our earnest effort
 to victory. A family bond -- that unbreakable thing that has been endowed by all humanity
 with sacredness, by God who seeks to impress upon our minds the weight of
-His love by giving up his Son and calling himself Our Father, and by blood itself without
+His love by giving up His Son and calling himself Our Father, and by blood itself without
 which nothing else could weigh more than a thimble -- has shattered and lays broken at our
 feet. Our regrets pile before us like a great mountain. Our contemporaries tell us to
 forget any inkling of sorrow, yet we cannot help but feel kinship with Atlas, excepting that
