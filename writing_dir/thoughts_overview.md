@@ -2,6 +2,7 @@
 layout: writing
 ---
 
+- [Angst of an Ending](./thoughts/endings.html)
 - [These things happen](./thoughts/theseThingsHappen.html)
 - [Ric Flair; or, The Belt](./thoughts/ric_flair.html)
 - [K Nearest Neighbors Overview and Demo](./thoughts/InteractiveNeighbors.html)
