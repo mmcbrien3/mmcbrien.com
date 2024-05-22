@@ -2,7 +2,7 @@
 layout: thoughts_entry
 ---
 
-### These Things Happen
+## These Things Happen
 
 #### March 23rd, 2024
 

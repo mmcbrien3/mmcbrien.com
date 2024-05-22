@@ -2,7 +2,7 @@
 layout: thoughts_entry
 ---
 
-### Angst of an Ending
+## Angst of an Ending
 
 #### May 21st, 2024
 

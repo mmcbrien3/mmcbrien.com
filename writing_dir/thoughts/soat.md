@@ -4,7 +4,7 @@ layout: thoughts_entry
 
 ## Strangers on a Train
 
-### May 20th, 2024
+#### May 20th, 2024
 
 After I watched Hitchcock's *Strangers on a Train*, I was struck by the wide range of
 memorable visuals. After the film ended, I was clicking around on my laptop to look back
