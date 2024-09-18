@@ -22,7 +22,7 @@ with sacredness, by God who seeks to impress upon our minds the weight of
 His love by giving up His Son and calling himself Our Father, and by blood itself without
 which nothing else could weigh more than a thimble -- has shattered and lays broken at our
 feet. Our regrets pile before us like a great mountain. Our contemporaries tell us to
-forget any inkling of sorrow, yet we cannot help but feel kinship with Atlas, excepting that
+forget any inkling of sorrow, yet we cannot help but feel kinship with Atlas, accepting that
 we have condemned ourselves.
 
 How did we find ourselves here? My brothers, I have an answer and I have none at all. There

@@ -2,6 +2,7 @@
 layout: writing
 ---
 
+- [[Essay] Angst of Writing](./thoughts/angst_of_writing.html)
 - [[Essay] Angst of an Ending](./thoughts/endings.html)
 - [[Video] Strangers on a Train](./thoughts/soat.html)
 - [[Essay] These things happen](./thoughts/theseThingsHappen.html)
